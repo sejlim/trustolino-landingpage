@@ -35,8 +35,12 @@ export function SignupForm({ lang }: { lang: Lang }) {
         setError(t.form.errorRequired)
         return
       }
-      if (isNaN(ageNum) || ageNum < 18 || ageNum > 100) {
-        setError(t.form.errorRequired) // Or a specific age error
+      if (isNaN(ageNum) || ageNum > 100) {
+        setError(t.form.errorRequired)
+        return
+      }
+      if (ageNum < 18) {
+        setError(t.form.errorAge)
         return
       }
       if (!EMAIL_RE.test(value.email.trim())) {
