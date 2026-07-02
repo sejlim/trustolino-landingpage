@@ -23,7 +23,7 @@ export function SiteHeader({ lang }: { lang: Lang }) {
             <a
               key={l.href}
               href={l.href}
-              className="cursor-pointer rounded-lg px-3 py-1.5 transition-[color,background-color,transform] duration-200 hover:bg-secondary/60 hover:text-foreground active:scale-[0.96]"
+              className="cursor-pointer rounded-lg px-3 py-1.5 transition-[color,background-color,transform] duration-200 hover:bg-primary hover:text-white active:scale-[0.96]"
             >
               {l.label}
             </a>

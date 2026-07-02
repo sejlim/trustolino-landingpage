@@ -17,7 +17,7 @@ export function HowItWorks({ lang }: { lang: Lang }) {
           </p>
         </div>
 
-        <div className="grid max-w-5xl gap-6 md:grid-cols-2">
+        <div className="grid w-full gap-6 md:grid-cols-2">
           {t.howItWorks.items.map((item, i) => {
             const Icon = icons[i]
             return (

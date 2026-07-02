@@ -50,7 +50,7 @@ export const dictionaries = {
         },
         {
           title: "Wir erledigen den Papierkram",
-          desc: "Nach dem Termin wird das Geld automatisch aufgeteilt. Rechnungen werden vom System geschrieben und am Jahresende gibt es eine fertige EÜR.",
+          desc: "Nach dem Termin wird das Geld automatisch übermittelt. Rechnungen werden vom System geschrieben und am Jahresende gibt es eine fertige EÜR.",
         },
       ]
     },
@@ -98,7 +98,7 @@ export const dictionaries = {
       submitting: "Wird gesendet …",
       successTitle: "Du bist dabei!",
       successDesc:
-        "Danke für deine Vorregistrierung! Wir halten dich auf dem Laufenden und schicken dir pünktlich zum Launch deinen Coupon-Code.",
+        "Danke für deine Vorregistrierung! Wir halten dich auf dem Laufenden und schicken dir pünktlich zum Release deinen Coupon-Code.",
       errorRequired: "Bitte fülle alle Felder aus.",
       errorPrivacy: "Bitte akzeptiere die Datenschutzerklärung.",
       errorEmail: "Bitte gib eine gültige E-Mail-Adresse ein.",
@@ -246,13 +246,13 @@ export const dictionaries = {
       privacyTitle: "Privacy Policy",
       privacyContent:
         "The protection of your personal data is important to us. We collect and process your data exclusively on the basis of legal provisions (GDPR).\n\nPurpose of data processing: Pre-registration for caregivers.\nAll pre-registration data is automatically deleted 24h after the final coupon codes are sent (after the countdown expires).",
-      imprintTitle: "Imprint",
+      imprintTitle: "Legal Notice",
       imprintContent: "Trustolino\nMusterstraße 123\n68159 Mannheim\nGermany\n\ninfo@trustolino.de",
     },
     footer: {
       tagline: "Trusted childcare",
-      imprint: "Imprint",
-      privacy: "Privacy",
+      imprint: "Legal Notice",
+      privacy: "Privacy Policy",
       legalLabel: "Legal",
     },
     common: {

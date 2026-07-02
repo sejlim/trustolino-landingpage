@@ -13,8 +13,8 @@ import { Route as ImpressumRouteImport } from './routes/impressum'
 import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EnIndexRouteImport } from './routes/en/index'
-import { Route as EnPrivacyPolicyRouteImport } from './routes/en/privacy-policy'
-import { Route as EnImprintRouteImport } from './routes/en/imprint'
+import { Route as EnPrivacyRouteImport } from './routes/en/privacy'
+import { Route as EnLegalRouteImport } from './routes/en/legal'
 
 const ImpressumRoute = ImpressumRouteImport.update({
   id: '/impressum',
@@ -36,14 +36,14 @@ const EnIndexRoute = EnIndexRouteImport.update({
   path: '/en/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const EnPrivacyPolicyRoute = EnPrivacyPolicyRouteImport.update({
-  id: '/en/privacy-policy',
-  path: '/en/privacy-policy',
+const EnPrivacyRoute = EnPrivacyRouteImport.update({
+  id: '/en/privacy',
+  path: '/en/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
-const EnImprintRoute = EnImprintRouteImport.update({
-  id: '/en/imprint',
-  path: '/en/imprint',
+const EnLegalRoute = EnLegalRouteImport.update({
+  id: '/en/legal',
+  path: '/en/legal',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -51,16 +51,16 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/datenschutz': typeof DatenschutzRoute
   '/impressum': typeof ImpressumRoute
-  '/en/imprint': typeof EnImprintRoute
-  '/en/privacy-policy': typeof EnPrivacyPolicyRoute
+  '/en/legal': typeof EnLegalRoute
+  '/en/privacy': typeof EnPrivacyRoute
   '/en/': typeof EnIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/datenschutz': typeof DatenschutzRoute
   '/impressum': typeof ImpressumRoute
-  '/en/imprint': typeof EnImprintRoute
-  '/en/privacy-policy': typeof EnPrivacyPolicyRoute
+  '/en/legal': typeof EnLegalRoute
+  '/en/privacy': typeof EnPrivacyRoute
   '/en': typeof EnIndexRoute
 }
 export interface FileRoutesById {
@@ -68,34 +68,23 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/datenschutz': typeof DatenschutzRoute
   '/impressum': typeof ImpressumRoute
-  '/en/imprint': typeof EnImprintRoute
-  '/en/privacy-policy': typeof EnPrivacyPolicyRoute
+  '/en/legal': typeof EnLegalRoute
+  '/en/privacy': typeof EnPrivacyRoute
   '/en/': typeof EnIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    | '/'
-    | '/datenschutz'
-    | '/impressum'
-    | '/en/imprint'
-    | '/en/privacy-policy'
-    | '/en/'
+    '/' | '/datenschutz' | '/impressum' | '/en/legal' | '/en/privacy' | '/en/'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/datenschutz'
-    | '/impressum'
-    | '/en/imprint'
-    | '/en/privacy-policy'
-    | '/en'
+  to: '/' | '/datenschutz' | '/impressum' | '/en/legal' | '/en/privacy' | '/en'
   id:
     | '__root__'
     | '/'
     | '/datenschutz'
     | '/impressum'
-    | '/en/imprint'
-    | '/en/privacy-policy'
+    | '/en/legal'
+    | '/en/privacy'
     | '/en/'
   fileRoutesById: FileRoutesById
 }
@@ -103,8 +92,8 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DatenschutzRoute: typeof DatenschutzRoute
   ImpressumRoute: typeof ImpressumRoute
-  EnImprintRoute: typeof EnImprintRoute
-  EnPrivacyPolicyRoute: typeof EnPrivacyPolicyRoute
+  EnLegalRoute: typeof EnLegalRoute
+  EnPrivacyRoute: typeof EnPrivacyRoute
   EnIndexRoute: typeof EnIndexRoute
 }
 
@@ -138,18 +127,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EnIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/en/privacy-policy': {
-      id: '/en/privacy-policy'
-      path: '/en/privacy-policy'
-      fullPath: '/en/privacy-policy'
-      preLoaderRoute: typeof EnPrivacyPolicyRouteImport
+    '/en/privacy': {
+      id: '/en/privacy'
+      path: '/en/privacy'
+      fullPath: '/en/privacy'
+      preLoaderRoute: typeof EnPrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/en/imprint': {
-      id: '/en/imprint'
-      path: '/en/imprint'
-      fullPath: '/en/imprint'
-      preLoaderRoute: typeof EnImprintRouteImport
+    '/en/legal': {
+      id: '/en/legal'
+      path: '/en/legal'
+      fullPath: '/en/legal'
+      preLoaderRoute: typeof EnLegalRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -159,8 +148,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DatenschutzRoute: DatenschutzRoute,
   ImpressumRoute: ImpressumRoute,
-  EnImprintRoute: EnImprintRoute,
-  EnPrivacyPolicyRoute: EnPrivacyPolicyRoute,
+  EnLegalRoute: EnLegalRoute,
+  EnPrivacyRoute: EnPrivacyRoute,
   EnIndexRoute: EnIndexRoute,
 }
 export const routeTree = rootRouteImport

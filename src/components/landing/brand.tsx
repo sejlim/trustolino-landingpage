@@ -24,7 +24,7 @@ export function LanguageToggle({ lang }: { lang: Lang }) {
     return (
       <Link
         to="/en"
-        className="inline-flex h-9 items-center justify-center rounded-xl bg-accent px-4 py-2 text-sm font-extrabold text-accent-foreground transition-[transform,background-color] hover:bg-accent/90 cursor-pointer active:scale-[0.96] duration-200"
+        className="inline-flex h-9 items-center justify-center rounded-xl bg-accent border border-border px-4 py-2 text-sm font-extrabold text-accent-foreground transition-[transform,background-color] hover:bg-accent/90 cursor-pointer active:scale-[0.96] duration-200"
         aria-label="Switch to English"
       >
         EN
@@ -35,7 +35,7 @@ export function LanguageToggle({ lang }: { lang: Lang }) {
   return (
     <Link
       to="/"
-      className="inline-flex h-9 items-center justify-center rounded-xl bg-accent px-4 py-2 text-sm font-extrabold text-accent-foreground shadow-sm transition-[transform,background-color] hover:bg-accent/90 cursor-pointer active:scale-[0.96] duration-200"
+      className="inline-flex h-9 items-center justify-center rounded-xl bg-accent border border-border px-4 py-2 text-sm font-extrabold text-accent-foreground shadow-sm transition-[transform,background-color] hover:bg-accent/90 cursor-pointer active:scale-[0.96] duration-200"
       aria-label="Auf Deutsch wechseln"
     >
       DE

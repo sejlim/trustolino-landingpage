@@ -14,7 +14,7 @@ export const Route = createFileRoute('/en/')({
       { property: 'og:title', content: 'Trustolino | Become a Trusted Educator' },
       { property: 'og:description', content: 'The stress-free app for childcare. Register now as a caregiver, secure early benefits, and join the Trustolino community!' },
       { property: 'og:type', content: 'website' },
-      { property: 'og:image', content: '/logo.svg' },
+      { property: 'og:image', content: '/logo.png' },
     ]
   })
 })

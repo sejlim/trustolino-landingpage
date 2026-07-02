@@ -30,13 +30,13 @@ export function SiteFooter({ lang }: { lang: Lang }) {
             </p>
             <nav className="flex flex-col items-end gap-2 md:items-start md:gap-3">
               <Link
-                to={lang === "de" ? "/impressum" : "/en/imprint"}
+                to={lang === "de" ? "/impressum" : "/en/legal"}
                 className="cursor-pointer text-sm font-bold text-muted-foreground transition-colors duration-200 hover:text-foreground active:scale-[0.96]"
               >
                 {t.footer.imprint}
               </Link>
               <Link
-                to={lang === "de" ? "/datenschutz" : "/en/privacy-policy"}
+                to={lang === "de" ? "/datenschutz" : "/en/privacy"}
                 className="cursor-pointer text-sm font-bold text-muted-foreground transition-colors duration-200 hover:text-foreground active:scale-[0.96]"
               >
                 {t.footer.privacy}

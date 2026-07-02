@@ -203,7 +203,7 @@ export function SignupForm({ lang }: { lang: Lang }) {
                         <span>
                           {t.form.privacyConsentBefore}{" "}
                           <a
-                            href={lang === "de" ? "/datenschutz" : "/en/privacy-policy"}
+                            href={lang === "de" ? "/datenschutz" : "/en/privacy"}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="font-bold text-primary underline underline-offset-2 transition-colors hover:text-primary/80"
@@ -222,7 +222,7 @@ export function SignupForm({ lang }: { lang: Lang }) {
                       <Button
                         type="submit"
                         disabled={status === "submitting" || !canSubmit}
-                        className="mt-2 h-14 w-full rounded-full bg-accent text-accent-foreground text-base font-extrabold transition-[transform,background-color,opacity] duration-200 hover:bg-accent/90 disabled:cursor-not-allowed disabled:opacity-70 active:scale-[0.96]"
+                        className="mt-2 h-14 w-full rounded-full bg-accent border border-border text-accent-foreground text-base font-extrabold transition-[transform,background-color,opacity] duration-200 hover:bg-accent/90 disabled:cursor-not-allowed disabled:opacity-70 active:scale-[0.96]"
                         size="lg"
                       >
                         {status === "submitting" ? (

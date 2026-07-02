@@ -17,7 +17,7 @@ export function BusinessModel({ lang }: { lang: Lang }) {
           </p>
         </div>
 
-        <div className="grid max-w-5xl gap-6 md:grid-cols-2">
+        <div className="grid w-full gap-6 md:grid-cols-2">
           {/* Fee block */}
           <div className="flex h-full items-start gap-4 rounded-3xl border border-border bg-card p-6">
             <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-primary text-primary-foreground">

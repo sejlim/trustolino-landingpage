@@ -51,8 +51,8 @@ function RootDocument({ children }: { children: React.ReactNode }) {
   const isLegalPage = [
     "/impressum",
     "/datenschutz",
-    "/en/imprint",
-    "/en/privacy-policy"
+    "/en/legal",
+    "/en/privacy"
   ].includes(location.pathname.replace(/\/$/, ''))
 
   return (
@@ -64,7 +64,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <body className="font-sans text-foreground antialiased selection:bg-primary/20">
         {isLandingPage && <SiteHeader lang={lang} />}
         {isLegalPage && (
-          <div className="mx-auto max-w-3xl px-4 pt-12 sm:px-6">
+          <div className="mx-auto max-w-6xl px-4 pt-12 sm:px-6">
             <Link to={isEn ? "/en" : "/"} className="inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors">
               <ArrowLeftIcon className="size-4" />
               {isEn ? "Back to Home" : "Zurück zur Startseite"}

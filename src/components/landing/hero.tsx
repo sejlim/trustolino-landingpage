@@ -28,7 +28,7 @@ export function Hero({ lang }: { lang: Lang }) {
           <div className="flex pt-4">
             <a
               href="#signup"
-              className="inline-flex h-14 items-center justify-center rounded-2xl bg-accent px-8 text-lg font-extrabold text-accent-foreground transition-[transform,background-color] hover:bg-accent/90 active:scale-[0.96]"
+              className="inline-flex h-14 items-center justify-center rounded-2xl bg-accent border border-border px-8 text-lg font-extrabold text-accent-foreground transition-[transform,background-color] hover:bg-accent/90 active:scale-[0.96]"
             >
               {t.hero.ctaPrimary}
             </a>
@@ -36,11 +36,11 @@ export function Hero({ lang }: { lang: Lang }) {
 
         </div>
 
-        <div className="relative mx-auto hidden w-full max-w-md justify-center lg:flex lg:max-w-xl lg:pl-10">
+        <div className="relative hidden w-full max-w-md ml-auto justify-end lg:flex lg:max-w-xl lg:pl-10">
           <img 
             src="/icon.svg" 
             alt="Trustolino Dino" 
-            className="w-full h-auto object-contain" 
+            className="w-full h-auto object-contain object-right scale-110 origin-right" 
           />
         </div>
       </div>
