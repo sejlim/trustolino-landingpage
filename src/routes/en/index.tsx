@@ -1,0 +1,38 @@
+import { createFileRoute } from '@tanstack/react-router'
+import { Hero } from '@/components/landing/hero'
+import { TrustedEducator } from '@/components/landing/trusted-educator'
+import { HowItWorks } from '@/components/landing/how-it-works'
+import { BusinessModel } from '@/components/landing/business-model'
+import { SignupForm } from '@/components/landing/signup-form'
+
+export const Route = createFileRoute('/en/')({
+  component: Index,
+  head: () => ({
+    meta: [
+      { title: 'Trustolino | Become a Trusted Educator' },
+      { name: 'description', content: 'The stress-free app for childcare. Register now as a caregiver, secure early benefits, and join the Trustolino community!' },
+      { property: 'og:title', content: 'Trustolino | Become a Trusted Educator' },
+      { property: 'og:description', content: 'The stress-free app for childcare. Register now as a caregiver, secure early benefits, and join the Trustolino community!' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:image', content: '/logo.svg' },
+    ]
+  })
+})
+
+function Index() {
+  return (
+    <main>
+      <Hero lang="en" />
+      <HowItWorks lang="en" />
+      <BusinessModel lang="en" />
+      <div className="bg-secondary/20 border-t border-border">
+        <TrustedEducator lang="en" />
+        <section id="signup" className="border-t border-border pb-16 pt-8 sm:pb-24 sm:pt-12">
+          <div className="mx-auto w-full max-w-xl px-4 sm:px-6">
+            <SignupForm lang="en" />
+          </div>
+        </section>
+      </div>
+    </main>
+  )
+}
