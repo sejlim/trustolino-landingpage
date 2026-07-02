@@ -17,7 +17,7 @@ export const dictionaries = {
       badge: "Pre-Release · Rhein-Neckar-Region",
       titleA: "Werde Teil von",
       titleHighlight: "Trustolino",
-      intro: "Von der Suche bis hin zu sicheren Zahlungen, Trustolino verbindet Eltern mit geprüften Betreuern.",
+      intro: "Von der Suche bis hin zur sicheren Zahlungen, Trustolino verbindet Eltern mit geprüften Betreuern.",
       subtitle:
         "Sei von Anfang an dabei. Melde dich für das Trusted Educator Programm an und bestimme die Zukunft von Trustolino mit.",
       ctaPrimary: "Jetzt vorregistrieren",
