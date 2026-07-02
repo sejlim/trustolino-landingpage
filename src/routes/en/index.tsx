@@ -25,8 +25,8 @@ function Index() {
       <Hero lang="en" />
       <HowItWorks lang="en" />
       <BusinessModel lang="en" />
-      <div className="bg-secondary/20 border-t border-border">
-        <TrustedEducator lang="en" />
+      <TrustedEducator lang="en" />
+      <div className="border-t border-border bg-background">
         <SignupForm lang="en" />
       </div>
     </main>

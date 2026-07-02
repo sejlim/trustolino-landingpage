@@ -79,7 +79,7 @@ export function SignupForm({ lang }: { lang: Lang }) {
   return (
     <div 
       id="signup"
-      className="mx-auto w-full max-w-6xl px-4 pb-16 pt-8 sm:px-6 lg:pb-24 lg:pt-12"
+      className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 sm:py-24"
     >
       <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 lg:grid-rows-[auto_1fr]">
         
@@ -222,7 +222,7 @@ export function SignupForm({ lang }: { lang: Lang }) {
                       <Button
                         type="submit"
                         disabled={status === "submitting" || !canSubmit}
-                        className="mt-2 h-14 w-full rounded-full text-base font-extrabold transition-[transform,opacity] duration-200 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70 active:scale-[0.96]"
+                        className="mt-2 h-14 w-full rounded-full bg-accent text-accent-foreground text-base font-extrabold transition-[transform,background-color,opacity] duration-200 hover:bg-accent/90 disabled:cursor-not-allowed disabled:opacity-70 active:scale-[0.96]"
                         size="lg"
                       >
                         {status === "submitting" ? (

@@ -28,7 +28,7 @@ export function Hero({ lang }: { lang: Lang }) {
           <div className="flex pt-4">
             <a
               href="#signup"
-              className="inline-flex h-14 items-center justify-center rounded-2xl bg-primary px-8 text-lg font-extrabold text-primary-foreground transition-[transform,background-color] hover:bg-primary/90 active:scale-[0.96]"
+              className="inline-flex h-14 items-center justify-center rounded-2xl bg-accent px-8 text-lg font-extrabold text-accent-foreground transition-[transform,background-color] hover:bg-accent/90 active:scale-[0.96]"
             >
               {t.hero.ctaPrimary}
             </a>

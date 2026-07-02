@@ -51,41 +51,41 @@
 
   /* warm off-white with the slightest mint tint */
   --background: oklch(0.99 0.008 160);
-  --foreground: oklch(0.22 0.03 220);
+  --foreground: #1d1d1b;
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.03 220);
+  --card: #ffffff;
+  --card-foreground: #1d1d1b;
 
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.03 220);
+  --popover: #ffffff;
+  --popover-foreground: #1d1d1b;
 
   /* teal-blue from the dino */
-  --primary: oklch(0.52 0.08 214);
-  --primary-foreground: oklch(0.99 0.01 200);
+  --primary: #458893;
+  --primary-foreground: #ffffff;
 
   /* mint green */
   --secondary: oklch(0.9 0.07 158);
-  --secondary-foreground: oklch(0.3 0.05 200);
+  --secondary-foreground: #1d1d1b;
 
   --muted: oklch(0.96 0.01 180);
   --muted-foreground: oklch(0.48 0.02 220);
 
   /* golden yellow */
-  --accent: oklch(0.83 0.15 88);
-  --accent-foreground: oklch(0.27 0.04 70);
+  --accent: #fdc82b;
+  --accent-foreground: #1d1d1b;
 
   --destructive: oklch(0.58 0.21 25);
-  --destructive-foreground: oklch(0.99 0 0);
+  --destructive-foreground: #ffffff;
 
   --border: oklch(0.9 0.02 200);
   --input: oklch(0.9 0.02 200);
-  --ring: oklch(0.52 0.08 214);
+  --ring: #458893;
 
   --mint: oklch(0.9 0.07 158);
-  --mint-foreground: oklch(0.3 0.05 200);
+  --mint-foreground: #1d1d1b;
 
-  --chart-1: oklch(0.52 0.08 214);
-  --chart-2: oklch(0.83 0.15 88);
+  --chart-1: #458893;
+  --chart-2: #fdc82b;
   --chart-3: oklch(0.8 0.09 158);
   --chart-4: oklch(0.65 0.1 200);
   --chart-5: oklch(0.45 0.06 220);

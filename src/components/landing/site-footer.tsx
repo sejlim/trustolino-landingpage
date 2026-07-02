@@ -7,8 +7,8 @@ export function SiteFooter({ lang }: { lang: Lang }) {
   const t = dictionaries[lang]
 
   return (
-    <footer className="relative overflow-hidden border-t border-border bg-secondary/30">
-      <div className="relative mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 md:py-14 md:pb-16">
+    <footer className="flex justify-center px-4 pt-0 sm:px-6">
+      <div className="w-full max-w-6xl rounded-t-[2rem] border border-b-0 border-border bg-card px-6 py-8 md:px-10 md:py-12">
         <div className="flex flex-row items-center justify-between gap-4 md:grid md:grid-cols-2 md:items-start md:gap-10">
           {/* Brand column */}
           <div className="flex flex-col items-start gap-4 text-left">

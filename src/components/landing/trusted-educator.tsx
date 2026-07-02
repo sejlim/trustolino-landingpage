@@ -7,13 +7,13 @@ export function TrustedEducator({ lang }: { lang: Lang }) {
   const icons = [CheckBadgeIcon, ChatBubbleBottomCenterTextIcon, ClockIcon]
 
   return (
-    <section id="trusted" className="scroll-mt-20 pt-16 pb-8 sm:pt-24 sm:pb-12">
+    <section id="trusted" className="scroll-mt-20 bg-primary py-16 sm:py-24">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <div className="mb-12 max-w-2xl text-left">
-          <h2 className="text-balance text-3xl font-extrabold tracking-tight sm:text-4xl">
+          <h2 className="text-balance text-3xl font-extrabold tracking-tight sm:text-4xl text-primary-foreground">
             {t.trustedEducator.title}
           </h2>
-          <p className="mt-3 text-pretty text-lg leading-relaxed text-muted-foreground">
+          <p className="mt-3 text-pretty text-lg leading-relaxed text-primary-foreground/80">
             {t.trustedEducator.subtitle}
           </p>
         </div>
@@ -24,14 +24,14 @@ export function TrustedEducator({ lang }: { lang: Lang }) {
             return (
               <div
                 key={i}
-                className="flex flex-col gap-4 rounded-3xl border border-border bg-card p-6 lg:flex-row lg:items-start"
+                className="flex flex-col gap-4 rounded-3xl border border-primary-foreground/20 bg-primary-foreground/10 p-6 lg:flex-row lg:items-start"
               >
-                <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-secondary text-primary">
+                <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-primary-foreground text-primary">
                   <Icon className="size-5" aria-hidden />
                 </span>
                 <div className="flex flex-col gap-1.5">
-                  <h3 className="text-lg font-extrabold text-foreground">{item.title}</h3>
-                  <p className="text-pretty text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
+                  <h3 className="text-lg font-extrabold text-primary-foreground">{item.title}</h3>
+                  <p className="text-pretty text-sm leading-relaxed text-primary-foreground/80">{item.desc}</p>
                 </div>
               </div>
             )

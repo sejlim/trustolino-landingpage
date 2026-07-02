@@ -20,7 +20,7 @@ export function BusinessModel({ lang }: { lang: Lang }) {
         <div className="grid max-w-5xl gap-6 md:grid-cols-2">
           {/* Fee block */}
           <div className="flex h-full items-start gap-4 rounded-3xl border border-border bg-card p-6">
-            <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-secondary text-primary">
+            <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
               <ReceiptPercentIcon className="size-5" aria-hidden />
             </span>
             <div className="flex flex-col gap-1.5">
@@ -31,7 +31,7 @@ export function BusinessModel({ lang }: { lang: Lang }) {
 
           {/* Privacy block */}
           <div className="flex h-full items-start gap-4 rounded-3xl border border-border bg-card p-6">
-            <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-secondary text-primary">
+            <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
               <ShieldCheckIcon className="size-5" aria-hidden />
             </span>
             <div className="flex flex-col gap-1.5">
