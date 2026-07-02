@@ -33,7 +33,7 @@ export const dictionaries = {
       live: "Wir sind live! Willkommen bei Trustolino.",
     },
     howItWorks: {
-      title: "So funktioniert Trustolino für dich",
+      title: "So funktioniert es",
       subtitle: "Konzentrier dich auf das, was dir liegt. Wir kümmern uns um den Rest.",
       items: [
         {
@@ -163,7 +163,7 @@ export const dictionaries = {
       live: "We're live! Welcome to Trustolino.",
     },
     howItWorks: {
-      title: "How Trustolino works for you",
+      title: "How it works",
       subtitle: "Focus on what you do best, we'll take care of the rest.",
       items: [
         {

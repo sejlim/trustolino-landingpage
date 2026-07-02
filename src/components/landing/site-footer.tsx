@@ -8,27 +8,27 @@ export function SiteFooter({ lang }: { lang: Lang }) {
 
   return (
     <footer className="relative overflow-hidden border-t border-border bg-secondary/30">
-      <div className="relative mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
-        <div className="grid gap-10 md:grid-cols-2">
+      <div className="relative mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 md:py-14 md:pb-16">
+        <div className="flex flex-row items-center justify-between gap-4 md:grid md:grid-cols-2 md:items-start md:gap-10">
           {/* Brand column */}
-          <div className="flex flex-col items-center gap-4 text-center md:items-start md:text-left">
+          <div className="flex flex-col items-start gap-4 text-left">
             <div onClick={(e) => {
               e.preventDefault()
               window.scrollTo({ top: 0, behavior: 'smooth' })
             }}>
               <Logo variant="logo" lang={lang} />
             </div>
-            <p className="max-w-xs text-pretty text-sm leading-relaxed text-muted-foreground">
+            <p className="hidden max-w-xs text-pretty text-sm leading-relaxed text-muted-foreground md:block">
               {t.footer.tagline}
             </p>
           </div>
 
           {/* Legal column */}
-          <div className="flex flex-col items-center gap-4 md:items-start">
-            <p className="text-xs font-extrabold uppercase tracking-widest text-muted-foreground">
+          <div className="flex flex-col items-end gap-1 md:items-start md:gap-4">
+            <p className="hidden text-xs font-extrabold uppercase tracking-widest text-muted-foreground md:block">
               {t.footer.legalLabel}
             </p>
-            <nav className="flex flex-col items-center gap-3 md:items-start">
+            <nav className="flex flex-col items-end gap-2 md:items-start md:gap-3">
               <Link
                 to={lang === "de" ? "/impressum" : "/en/imprint"}
                 className="cursor-pointer text-sm font-bold text-muted-foreground transition-colors duration-200 hover:text-foreground active:scale-[0.96]"

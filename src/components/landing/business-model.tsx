@@ -8,7 +8,7 @@ export function BusinessModel({ lang }: { lang: Lang }) {
   return (
     <section id="business-model" className="scroll-mt-20 py-16 sm:py-24 border-t border-border">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
-        <div className="mx-auto mb-12 max-w-2xl text-center">
+        <div className="mb-12 max-w-2xl text-left">
           <h2 className="text-balance text-3xl font-extrabold tracking-tight sm:text-4xl">
             {t.businessModel.title}
           </h2>
@@ -17,23 +17,27 @@ export function BusinessModel({ lang }: { lang: Lang }) {
           </p>
         </div>
 
-        <div className="mx-auto max-w-4xl grid gap-6 md:grid-cols-2">
+        <div className="grid max-w-5xl gap-6 md:grid-cols-2">
           {/* Fee block */}
-          <div className="flex h-full flex-col gap-4 rounded-3xl border border-border bg-card p-6">
-            <span className="flex size-11 items-center justify-center rounded-2xl bg-secondary text-primary">
+          <div className="flex h-full items-start gap-4 rounded-3xl border border-border bg-card p-6">
+            <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-secondary text-primary">
               <ReceiptPercentIcon className="size-5" aria-hidden />
             </span>
-            <h3 className="text-lg font-extrabold text-foreground">{t.businessModel.feeTitle}</h3>
-            <p className="text-pretty text-sm leading-relaxed text-muted-foreground">{t.businessModel.feeDesc}</p>
+            <div className="flex flex-col gap-1.5">
+              <h3 className="text-lg font-extrabold text-foreground">{t.businessModel.feeTitle}</h3>
+              <p className="text-pretty text-sm leading-relaxed text-muted-foreground">{t.businessModel.feeDesc}</p>
+            </div>
           </div>
 
           {/* Privacy block */}
-          <div className="flex h-full flex-col gap-4 rounded-3xl border border-border bg-card p-6">
-            <span className="flex size-11 items-center justify-center rounded-2xl bg-secondary text-primary">
+          <div className="flex h-full items-start gap-4 rounded-3xl border border-border bg-card p-6">
+            <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-secondary text-primary">
               <ShieldCheckIcon className="size-5" aria-hidden />
             </span>
-            <h3 className="text-lg font-extrabold text-foreground">{t.businessModel.privacyTitle}</h3>
-            <p className="text-pretty text-sm leading-relaxed text-muted-foreground">{t.businessModel.privacyDesc}</p>
+            <div className="flex flex-col gap-1.5">
+              <h3 className="text-lg font-extrabold text-foreground">{t.businessModel.privacyTitle}</h3>
+              <p className="text-pretty text-sm leading-relaxed text-muted-foreground">{t.businessModel.privacyDesc}</p>
+            </div>
           </div>
         </div>
       </div>

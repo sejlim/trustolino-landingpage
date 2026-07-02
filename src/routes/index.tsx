@@ -27,11 +27,7 @@ function Index() {
       <BusinessModel lang="de" />
       <div className="bg-secondary/20 border-t border-border">
         <TrustedEducator lang="de" />
-        <section id="signup" className="border-t border-border pb-16 pt-8 sm:pb-24 sm:pt-12">
-          <div className="mx-auto w-full max-w-xl px-4 sm:px-6">
-            <SignupForm lang="de" />
-          </div>
-        </section>
+        <SignupForm lang="de" />
       </div>
     </main>
   )

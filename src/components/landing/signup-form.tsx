@@ -79,21 +79,23 @@ export function SignupForm({ lang }: { lang: Lang }) {
   return (
     <div 
       id="signup"
-      className="mx-auto w-full max-w-md overflow-hidden rounded-[2rem] border border-border bg-card lg:max-w-none"
+      className="mx-auto w-full max-w-6xl px-4 pb-16 pt-8 sm:px-6 lg:pb-24 lg:pt-12"
     >
-          {/* Countdown banner */}
-          <div className="flex flex-col items-center gap-3 bg-primary px-6 py-5 text-primary-foreground sm:py-6">
-            <div className="flex items-center gap-2 text-sm font-extrabold">
-              {t.countdown.heading}
-            </div>
-            <Countdown lang={lang} variant="dark" />
+      <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 lg:grid-rows-[auto_1fr]">
+        
+        {/* COUNTDOWN (Top on mobile, Top-Right on desktop) */}
+        <div className="flex flex-col items-center justify-center gap-4 rounded-[2rem] bg-primary p-8 text-primary-foreground sm:p-10 lg:col-start-2 lg:row-start-1">
+          <div className="flex items-center gap-2 text-sm font-extrabold">
+            {t.countdown.heading}
           </div>
+          <Countdown lang={lang} variant="dark" />
+        </div>
 
+        {/* LEFT SIDE: FORM (Middle on mobile, Left spanning both rows on desktop) */}
+        <div className="flex flex-col overflow-hidden rounded-[2rem] border border-border bg-card lg:col-start-1 lg:row-span-2 lg:row-start-1">
           <div className="p-6 sm:p-10">
             {status === "success" ? (
-              <div 
-                className="flex flex-col items-center gap-4 py-8 text-center"
-              >
+              <div className="flex flex-col items-center gap-4 py-8 text-center">
                 <span className="flex size-16 items-center justify-center rounded-full bg-primary/10 text-primary">
                   <CheckCircleIcon className="size-9" aria-hidden />
                 </span>
@@ -104,7 +106,7 @@ export function SignupForm({ lang }: { lang: Lang }) {
               </div>
             ) : (
               <>
-                <div className="mb-7 text-center">
+                <div className="mb-7 text-left">
                   <h2 className="text-balance text-2xl font-extrabold tracking-tight sm:text-3xl">
                     {t.form.title}
                   </h2>
@@ -119,7 +121,7 @@ export function SignupForm({ lang }: { lang: Lang }) {
                     e.stopPropagation()
                     form.handleSubmit()
                   }}
-                  className="flex flex-col gap-5"
+                  className="flex flex-col gap-6"
                   noValidate
                 >
                   <div className="grid gap-5 sm:grid-cols-2">
@@ -214,18 +216,13 @@ export function SignupForm({ lang }: { lang: Lang }) {
                     )}
                   />
 
-                  <div className="flex flex-col gap-2 rounded-xl bg-primary/5 p-4 text-xs leading-relaxed text-muted-foreground">
-                    <p>{t.form.emailNote}</p>
-                    <p>{t.form.couponNote}</p>
-                  </div>
-
                   <form.Subscribe
                     selector={(state) => [state.canSubmit, state.isSubmitting]}
                     children={([canSubmit, isSubmitting]) => (
                       <Button
                         type="submit"
                         disabled={status === "submitting" || !canSubmit}
-                        className="mt-1 h-13 w-full rounded-full text-base font-extrabold transition-[transform,opacity] duration-200 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70 active:scale-[0.96]"
+                        className="mt-2 h-14 w-full rounded-full text-base font-extrabold transition-[transform,opacity] duration-200 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70 active:scale-[0.96]"
                         size="lg"
                       >
                         {status === "submitting" ? (
@@ -245,6 +242,15 @@ export function SignupForm({ lang }: { lang: Lang }) {
               </>
             )}
           </div>
+        </div>
+
+        {/* INFO (Bottom on mobile, Bottom-Right on desktop) */}
+        <div className="flex flex-col gap-4 rounded-[2rem] border border-border bg-primary/5 p-6 text-sm leading-relaxed text-muted-foreground sm:p-8 lg:col-start-2 lg:row-start-2">
+          <p>{t.form.emailNote}</p>
+          <p>{t.form.couponNote}</p>
+        </div>
+
+      </div>
     </div>
   )
 }
