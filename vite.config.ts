@@ -18,6 +18,7 @@ const config = defineConfig({
   preview: {
     port,
     strictPort: true,
+    allowedHosts: true,
   },
 })
 
