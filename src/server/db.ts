@@ -3,7 +3,7 @@ import path from 'path'
 import fs from 'fs'
 
 // @ts-ignore
-const dbPath = process.env.SQLITE_DB_PATH || path.resolve(process.cwd(), 'data/trustolino_leads.db')
+const dbPath = process.env.DATABASE_PATH || path.resolve(process.cwd(), 'data/trustolino_leads.db')
 
 const dir = path.dirname(dbPath)
 if (!fs.existsSync(dir)) {

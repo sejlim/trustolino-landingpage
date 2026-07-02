@@ -69,16 +69,17 @@
             user = lib.mkOption {
               type = lib.types.str;
               default = "trustolino";
-              description = "User account under which the service runs. Ensure this user has write permissions to the SQLITE_DB_PATH.";
+              description = "User account under which the service runs. Ensure this user has write permissions to the DATABASE_PATH.";
             };
 
             environment = lib.mkOption {
               type = lib.types.attrsOf lib.types.str;
               default = { };
-              description = "Environment variables for the trustolino-landingpage service (e.g., PORT, SQLITE_DB_PATH).";
+              description = "Environment variables for the trustolino-landingpage service (e.g., PORT, DATABASE_PATH).";
               example = {
-                SQLITE_DB_PATH = "/var/lib/trustolino_leads.db";
-                VITE_COUNTDOWN_TARGET = "2026-12-31T23:59:59Z";
+                PORT = "4173";
+                DATABASE_PATH = "/var/lib/trustolino-landingpage/data.db";
+                "VITE_COUNTDOWN_TARGET" = "2026-12-31T23:59:59Z";
               };
             };
           };

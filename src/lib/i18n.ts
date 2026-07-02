@@ -1,8 +1,5 @@
 export type Lang = "de" | "en"
 
-const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || "info@trustolino.de"
-const contactPhone = import.meta.env.VITE_CONTACT_PHONE || "+49 621 1234567"
-
 export const dictionaries = {
   de: {
     meta: {
@@ -120,14 +117,11 @@ export const dictionaries = {
         "Der Schutz deiner persönlichen Daten ist wichtig. Wir erheben und verarbeiten deine Daten ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO).\n\nZweck der Datenverarbeitung: Vorregistrierung für Betreuer.\nAlle Daten aus der Vorregistrierung werden automatisch 24 Stunden nach dem finalen Versand des Coupon-Codes (nach Ablauf des Countdowns) gelöscht.",
       imprintTitle: "Impressum",
       imprintContent: "Trustolino\nMusterstraße 123\n68159 Mannheim\nDeutschland\n\ninfo@trustolino.de",
-      contactTitle: "Kontakt",
-      contactContent: `${contactEmail}\n${contactPhone}\n`,
     },
     footer: {
       tagline: "Vertrauensvolle Kinderbetreuung",
       imprint: "Impressum",
       privacy: "Datenschutz",
-      contact: "Kontakt",
       legalLabel: "Rechtliches",
     },
     common: {
@@ -252,14 +246,11 @@ export const dictionaries = {
         "The protection of your personal data is important to us. We collect and process your data exclusively on the basis of legal provisions (GDPR).\n\nPurpose of data processing: Pre-registration for caregivers.\nAll pre-registration data is automatically deleted 24h after the final coupon codes are sent (after the countdown expires).",
       imprintTitle: "Imprint",
       imprintContent: "Trustolino\nMusterstraße 123\n68159 Mannheim\nGermany\n\ninfo@trustolino.de",
-      contactTitle: "Contact",
-      contactContent: `${contactEmail}\n${contactPhone}\n`,
     },
     footer: {
       tagline: "Trusted childcare",
       imprint: "Imprint",
       privacy: "Privacy",
-      contact: "Contact",
       legalLabel: "Legal",
     },
     common: {
