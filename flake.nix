@@ -24,7 +24,7 @@
 
             # To update this hash, run `nix build` once. Nix will fail and tell you the correct hash.
             # Replace the fakeHash with the output.
-            npmDepsHash = "sha256-z1bem+Gw3oTI4N0H9GkuWdZOCtaiqDs0ta54S5o0U/o=";
+            npmDepsHash = "sha256-2L1HFEIYMx0ITfnkWCH9vziXL3KWhxzAssYA9cypPJE=";
 
             # We need Vite and other dev dependencies to serve the app via `npm run preview`
             npmFlags = [ "" ];
@@ -77,8 +77,8 @@
               default = { };
               description = "Environment variables for the trustolino-landingpage service (e.g., PORT, SQLITE_DB_PATH).";
               example = {
-                PORT = "4173";
-                SQLITE_DB_PATH = "/var/lib/trustolino-landingpage/data.db";
+                SQLITE_DB_PATH = "/var/lib/trustolino_leads.db";
+                VITE_COUNTDOWN_TARGET = "2026-12-31T23:59:59Z";
               };
             };
           };

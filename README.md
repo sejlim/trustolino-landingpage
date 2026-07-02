@@ -26,10 +26,9 @@ cp .env.example .env
 ```
 
 Configure the environment variables:
+
 - `SQLITE_DB_PATH`: The local path where the SQLite database will be stored (e.g., `./data/trustolino_leads.db`).
 - `VITE_COUNTDOWN_TARGET`: The target date for the countdown timer (e.g., `2026-12-31T23:59:59Z`).
-- `VITE_CONTACT_EMAIL`: The contact email displayed in the footer.
-- `VITE_CONTACT_PHONE`: The contact phone number displayed in the footer.
 
 ### Installation
 
