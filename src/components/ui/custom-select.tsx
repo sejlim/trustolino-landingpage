@@ -42,7 +42,7 @@ export function CustomSelect({
         )}
       >
         {selected ? selected.label : placeholder}
-        <ChevronDownIcon className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground transition-transform duration-200" style={{ transform: open ? 'translateY(-50%) rotate(180deg)' : 'translateY(-50%)' }} />
+        <ChevronDownIcon className={cn("pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground transition-transform duration-200", open && "rotate-180")} />
       </button>
       <AnimatePresence>
         {open && (

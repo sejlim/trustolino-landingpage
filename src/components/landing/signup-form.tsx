@@ -35,7 +35,7 @@ export function SignupForm({ lang }: { lang: Lang }) {
         setError(t.form.errorRequired)
         return
       }
-      if (isNaN(ageNum) || ageNum < 14 || ageNum > 100) {
+      if (isNaN(ageNum) || ageNum < 18 || ageNum > 100) {
         setError(t.form.errorRequired) // Or a specific age error
         return
       }
@@ -145,7 +145,7 @@ export function SignupForm({ lang }: { lang: Lang }) {
                           <Input
                             id={field.name}
                             type="number"
-                            min="14"
+                            min="18"
                             max="100"
                             value={field.state.value}
                             onChange={(e) => field.handleChange(e.target.value)}
