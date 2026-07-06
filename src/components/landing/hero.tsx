@@ -9,8 +9,9 @@ export function Hero({ lang }: { lang: Lang }) {
     <section id="top" className="relative min-h-dvh overflow-hidden bg-background">
       <div className="mx-auto grid min-h-[inherit] w-full max-w-6xl items-center gap-10 px-4 pb-16 pt-24 sm:px-6 lg:grid-cols-2 lg:gap-8 lg:pb-24 lg:pt-28">
         <div className="flex flex-col items-start gap-6 text-left">
-          <h1 className="text-balance text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
-            {t.hero.titleA}{" "}
+          <h1 className="text-balance text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+            {t.hero.titleA}
+            <br />
             <span className="relative whitespace-nowrap text-primary">
               {t.hero.titleHighlight}
               <span className="absolute -bottom-1 left-0 -z-10 h-3 w-full rounded-full bg-accent/60" />

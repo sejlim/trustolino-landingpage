@@ -6,11 +6,12 @@ import { CheckCircleIcon, ArrowPathIcon } from "@heroicons/react/16/solid"
 import { dictionaries, type Lang } from "@/lib/i18n"
 import { Countdown } from "@/components/landing/countdown"
 import { CustomSelect } from "@/components/ui/custom-select"
-import { Input } from "@/components/ui/input"
+import { CustomInput } from "@/components/ui/custom-input"
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Button } from "@/components/ui/button"
 import { submitSignup } from "@/server/signup"
+import { motion, AnimatePresence } from "framer-motion"
 
 type Status = "idle" | "submitting" | "success"
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -19,6 +20,7 @@ export function SignupForm({ lang }: { lang: Lang }) {
   const t = dictionaries[lang]
   const [status, setStatus] = useState<Status>("idle")
   const [error, setError] = useState<string | null>(null)
+  const [step, setStep] = useState(1)
   
   const form = useForm({
     defaultValues: {
@@ -92,10 +94,20 @@ export function SignupForm({ lang }: { lang: Lang }) {
         </div>
 
         {/* LEFT SIDE: FORM (Middle on mobile, Left spanning both rows on desktop) */}
-        <div className="flex flex-col overflow-hidden rounded-[2rem] border border-border bg-card lg:col-start-1 lg:row-span-2 lg:row-start-1">
-          <div className="p-6 sm:p-10">
+        <div className="relative flex flex-col overflow-hidden rounded-[2rem] border border-border bg-card lg:col-start-1 lg:row-span-2 lg:row-start-1">
+          {status !== "success" && (
+            <div className="absolute left-0 right-0 top-0 h-1.5 bg-primary/10">
+              <motion.div
+                className="h-full bg-primary"
+                initial={false}
+                animate={{ width: `${(step / 3) * 100}%` }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              />
+            </div>
+          )}
+          <div className="flex flex-1 flex-col p-6 sm:p-10 pt-8 sm:pt-12">
             {status === "success" ? (
-              <div className="flex flex-col items-center gap-4 py-8 text-center">
+              <div className="flex h-full flex-col items-center justify-center gap-4 py-8 text-center">
                 <span className="flex size-16 items-center justify-center rounded-full bg-primary/10 text-primary">
                   <CheckCircleIcon className="size-9" aria-hidden />
                 </span>
@@ -105,148 +117,282 @@ export function SignupForm({ lang }: { lang: Lang }) {
                 </p>
               </div>
             ) : (
-              <>
-                <div className="mb-7 text-left">
-                  <h2 className="text-balance text-2xl font-extrabold tracking-tight sm:text-3xl">
-                    {t.form.title}
-                  </h2>
-                  <p className="mt-2 text-pretty leading-relaxed text-muted-foreground">
-                    {t.form.subtitle}
-                  </p>
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault()
+                  e.stopPropagation()
+                  form.handleSubmit()
+                }}
+                className="relative flex flex-1 flex-col"
+                noValidate
+              >
+                {/* INVISIBLE SIZER to lock height to Step 1 */}
+                <div className="invisible pointer-events-none flex flex-col gap-6" aria-hidden>
+                  <div className="mb-2 text-left">
+                    <h2 className="text-balance text-2xl font-extrabold tracking-tight sm:text-3xl">
+                      {t.form.title}
+                    </h2>
+                    <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
+                      {t.form.subtitle}
+                    </p>
+                  </div>
+                  <div className="mt-auto pt-4">
+                    <div className="h-14 w-full" />
+                  </div>
                 </div>
 
-                <form
-                  onSubmit={(e) => {
-                    e.preventDefault()
-                    e.stopPropagation()
-                    form.handleSubmit()
-                  }}
-                  className="flex flex-col gap-6"
-                  noValidate
-                >
-                  <div className="grid gap-5 sm:grid-cols-2">
-                    <form.Field
-                      name="gender"
-                      children={(field) => (
-                        <div className="flex flex-col gap-2">
-                          <Label htmlFor={field.name}>{t.form.gender}</Label>
-                          <CustomSelect
-                            options={[
-                              { value: "male", label: t.form.genderMale },
-                              { value: "female", label: t.form.genderFemale },
-                              { value: "diverse", label: t.form.genderDiverse },
-                            ]}
-                            value={field.state.value}
-                            onChange={field.handleChange}
-                            placeholder={t.form.genderPlaceholder}
-                          />
-                        </div>
-                      )}
-                    />
-                    <form.Field
-                      name="age"
-                      children={(field) => (
-                        <div className="flex flex-col gap-2">
-                          <Label htmlFor={field.name}>{t.form.age}</Label>
-                          <Input
-                            id={field.name}
-                            type="number"
-                            min="18"
-                            max="100"
-                            value={field.state.value}
-                            onChange={(e) => field.handleChange(e.target.value)}
-                            placeholder={t.form.agePlaceholder}
-                            className="h-11 rounded-xl"
-                            required
-                          />
-                        </div>
-                      )}
-                    />
-                  </div>
+                <div className="absolute inset-0 flex flex-col">
+                  <AnimatePresence mode="wait">
+                  {step === 1 && (
+                    <motion.div
+                      key="step1"
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -20 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="flex h-full flex-col gap-6"
+                    >
+                      <div className="mb-2 text-left">
+                        <h2 className="text-balance text-2xl font-extrabold tracking-tight sm:text-3xl">
+                          {t.form.title}
+                        </h2>
+                        <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
+                          {t.form.subtitle}
+                        </p>
+                      </div>
 
-                  <div className="grid gap-5 sm:grid-cols-1">
-                    <form.Field
-                      name="email"
-                      children={(field) => (
-                        <div className="flex flex-col gap-2">
-                          <Label htmlFor={field.name}>{t.form.email}</Label>
-                          <Input
-                            id={field.name}
-                            type="email"
-                            autoComplete="email"
-                            value={field.state.value}
-                            onChange={(e) => field.handleChange(e.target.value)}
-                            placeholder={t.form.emailPlaceholder}
-                            className="h-11 rounded-xl"
-                            required
-                          />
-                        </div>
-                      )}
-                    />
-                  </div>
-
-                  {error && (
-                    <p className="rounded-xl bg-destructive/10 px-4 py-2.5 text-sm font-bold text-destructive" role="alert">
-                      {error}
-                    </p>
+                      <div className="mt-auto pt-4">
+                        <Button
+                          type="button"
+                          onClick={() => {
+                            setError(null)
+                            setStep(2)
+                          }}
+                          className="h-14 w-full rounded-full bg-accent border border-border text-accent-foreground text-base font-extrabold transition-[transform,background-color,opacity] duration-200 hover:bg-accent/90 active:scale-[0.96]"
+                          size="lg"
+                        >
+                          {t.form.submit}
+                        </Button>
+                      </div>
+                    </motion.div>
                   )}
 
-                  <form.Field
-                    name="privacyConsent"
-                    children={(field) => (
-                      <Label className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-muted-foreground group">
-                        <Checkbox
-                          checked={field.state.value}
-                          onCheckedChange={(c) => field.handleChange(c === true)}
-                          className="mt-0.5"
+                  {step === 2 && (
+                    <motion.div
+                      key="step2"
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -20 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="flex h-full flex-col gap-6"
+                    >
+                      <div className="grid gap-5 sm:grid-cols-2">
+                        <form.Field
+                          name="gender"
+                          children={(field) => (
+                            <div className="flex flex-col gap-2">
+                              <Label htmlFor={field.name}>{t.form.gender}</Label>
+                              <CustomSelect
+                                options={[
+                                  { value: "male", label: t.form.genderMale },
+                                  { value: "female", label: t.form.genderFemale },
+                                  { value: "diverse", label: t.form.genderDiverse },
+                                ]}
+                                value={field.state.value}
+                                onChange={field.handleChange}
+                                placeholder={t.form.genderPlaceholder}
+                                className="bg-white text-zinc-900 border-zinc-200"
+                              />
+                            </div>
+                          )}
                         />
-                        <span>
-                          {t.form.privacyConsentBefore}{" "}
-                          <a
-                            href={lang === "de" ? "/datenschutz" : "/en/privacy"}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-bold text-primary underline underline-offset-2 transition-colors hover:text-primary/80"
-                          >
-                            {t.form.privacyConsentLink}
-                          </a>{" "}
-                          {t.form.privacyConsentAfter}
-                        </span>
-                      </Label>
-                    )}
-                  />
+                        <form.Field
+                          name="age"
+                          children={(field) => (
+                            <div className="flex flex-col gap-2">
+                              <Label htmlFor={field.name}>{t.form.age}</Label>
+                              <CustomInput
+                                id={field.name}
+                                type="number"
+                                min="18"
+                                max="100"
+                                value={field.state.value}
+                                onChange={(e) => field.handleChange(e.target.value)}
+                                placeholder={t.form.agePlaceholder}
+                                className="bg-white text-zinc-900 border-zinc-200"
+                                required
+                              />
+                            </div>
+                          )}
+                        />
+                      </div>
 
-                  <form.Subscribe
-                    selector={(state) => [state.canSubmit, state.isSubmitting]}
-                    children={([canSubmit, isSubmitting]) => (
-                      <Button
-                        type="submit"
-                        disabled={status === "submitting" || !canSubmit}
-                        className="mt-2 h-14 w-full rounded-full bg-accent border border-border text-accent-foreground text-base font-extrabold transition-[transform,background-color,opacity] duration-200 hover:bg-accent/90 disabled:cursor-not-allowed disabled:opacity-70 active:scale-[0.96]"
-                        size="lg"
-                      >
-                        {status === "submitting" ? (
-                          <>
-                            <ArrowPathIcon className="size-5 animate-spin" aria-hidden />
-                            {t.form.submitting}
-                          </>
-                        ) : (
-                          <>
-                            {t.form.submit}
-                          </>
+                      <p className="text-sm leading-relaxed text-muted-foreground bg-primary/5 p-4 rounded-xl border border-border">
+                        {t.form.metricsNote}
+                      </p>
+
+                      {error && (
+                        <p className="rounded-xl bg-destructive/10 px-4 py-2.5 text-sm font-bold text-destructive" role="alert">
+                          {error}
+                        </p>
+                      )}
+
+                      <div className="mt-auto flex gap-4 flex-col sm:flex-row pt-4">
+                        <Button
+                          type="button"
+                          onClick={() => {
+                            setError(null)
+                            setStep(1)
+                          }}
+                          variant="outline"
+                          className="h-14 w-full sm:w-1/3 rounded-full text-base font-extrabold"
+                          size="lg"
+                        >
+                          {t.form.back}
+                        </Button>
+                        <Button
+                          type="button"
+                          onClick={() => {
+                            const gender = form.getFieldValue("gender")
+                            const age = form.getFieldValue("age")
+                            if (!gender || !age.trim()) {
+                              setError(t.form.errorRequired)
+                              return
+                            }
+                            const ageNum = parseInt(age, 10)
+                            if (isNaN(ageNum) || ageNum > 100) {
+                              setError(t.form.errorRequired)
+                              return
+                            }
+                            if (ageNum < 18) {
+                              setError(t.form.errorAge)
+                              return
+                            }
+                            setError(null)
+                            setStep(3)
+                          }}
+                          className="h-14 w-full sm:w-2/3 rounded-full bg-accent border border-border text-accent-foreground text-base font-extrabold transition-[transform,background-color,opacity] duration-200 hover:bg-accent/90 active:scale-[0.96]"
+                          size="lg"
+                        >
+                          {t.form.next}
+                        </Button>
+                      </div>
+                    </motion.div>
+                  )}
+
+                  {step === 3 && (
+                    <motion.div
+                      key="step3"
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -20 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="flex h-full flex-col gap-6"
+                    >
+                      <div className="grid gap-5 sm:grid-cols-1">
+                        <form.Field
+                          name="email"
+                          children={(field) => (
+                            <div className="flex flex-col gap-2">
+                              <Label htmlFor={field.name}>{t.form.email}</Label>
+                              <CustomInput
+                                id={field.name}
+                                type="email"
+                                autoComplete="email"
+                                value={field.state.value}
+                                onChange={(e) => field.handleChange(e.target.value)}
+                                placeholder={t.form.emailPlaceholder}
+                                className="bg-white text-zinc-900 border-zinc-200"
+                                required
+                              />
+                            </div>
+                          )}
+                        />
+                      </div>
+
+                      <p className="text-sm leading-relaxed text-muted-foreground bg-primary/5 p-4 rounded-xl border border-border">
+                        {t.form.emailNote}
+                      </p>
+
+                      <form.Field
+                        name="privacyConsent"
+                        children={(field) => (
+                          <Label className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-muted-foreground group">
+                            <Checkbox
+                              checked={field.state.value}
+                              onCheckedChange={(c) => field.handleChange(c === true)}
+                              className="mt-0.5"
+                            />
+                            <span>
+                              {t.form.privacyConsentBefore}{" "}
+                              <a
+                                href={lang === "de" ? "/datenschutz" : "/en/privacy"}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="font-bold text-primary underline underline-offset-2 transition-colors hover:text-primary/80"
+                              >
+                                {t.form.privacyConsentLink}
+                              </a>{" "}
+                              {t.form.privacyConsentAfter}
+                            </span>
+                          </Label>
                         )}
-                      </Button>
-                    )}
-                  />
-                </form>
-              </>
+                      />
+
+                      {error && (
+                        <p className="rounded-xl bg-destructive/10 px-4 py-2.5 text-sm font-bold text-destructive" role="alert">
+                          {error}
+                        </p>
+                      )}
+
+                      <div className="mt-auto flex gap-4 flex-col sm:flex-row pt-4">
+                        <Button
+                          type="button"
+                          onClick={() => {
+                            setError(null)
+                            setStep(2)
+                          }}
+                          variant="outline"
+                          className="h-14 w-full sm:w-1/3 rounded-full text-base font-extrabold"
+                          size="lg"
+                        >
+                          {t.form.back}
+                        </Button>
+                        
+                        <form.Subscribe
+                          selector={(state) => [state.canSubmit, state.isSubmitting]}
+                          children={([canSubmit, isSubmitting]) => (
+                            <Button
+                              type="submit"
+                              disabled={status === "submitting" || !canSubmit}
+                              className="h-14 w-full sm:w-2/3 rounded-full bg-accent border border-border text-accent-foreground text-base font-extrabold transition-[transform,background-color,opacity] duration-200 hover:bg-accent/90 disabled:cursor-not-allowed disabled:opacity-70 active:scale-[0.96]"
+                              size="lg"
+                            >
+                              {status === "submitting" ? (
+                                <>
+                                  <ArrowPathIcon className="size-5 animate-spin" aria-hidden />
+                                  {t.form.submitting}
+                                </>
+                              ) : (
+                                <>
+                                  {t.form.submit}
+                                </>
+                              )}
+                            </Button>
+                          )}
+                        />
+                      </div>
+                    </motion.div>
+                  )}
+                  </AnimatePresence>
+                </div>
+              </form>
             )}
           </div>
         </div>
 
         {/* INFO (Bottom on mobile, Bottom-Right on desktop) */}
         <div className="flex flex-col gap-4 rounded-[2rem] border border-border bg-primary/5 p-6 text-sm leading-relaxed text-muted-foreground sm:p-8 lg:col-start-2 lg:row-start-2">
-          <p>{t.form.emailNote}</p>
           <p>{t.form.couponNote}</p>
         </div>
 

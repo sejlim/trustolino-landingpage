@@ -8,19 +8,19 @@ export const dictionaries = {
         "Die stressfreie App für Kinderbetreuung. Registriere dich jetzt als Betreuer, sichere dir Vorteile und werde Teil der Trustolino-Community!",
     },
     nav: {
-      features: "Features",
+      features: "Praxiserfahrung",
       trustedEducator: "Trusted Educator",
       businessModel: "Preis",
       cta: "Trusted Educator werden",
     },
     hero: {
       badge: "Pre-Release · Rhein-Neckar-Region",
-      titleA: "Werde Teil von",
-      titleHighlight: "Trustolino",
-      intro: "Von der Suche bis hin zur sicheren Zahlungen, Trustolino verbindet Eltern mit geprüften Betreuern.",
+      titleA: "Starte deine pädagogische Zukunft schon",
+      titleHighlight: "heute",
+      intro: "Sammle echte Praxiserfahrung, baue deinen Lebenslauf auf und werde zertifizierter Trusted Educator. Kostenlos. Flexibel. Sinnvoll.",
       subtitle:
-        "Sei von Anfang an dabei. Melde dich für das Trusted Educator Programm an und bestimme die Zukunft von Trustolino mit.",
-      ctaPrimary: "Jetzt vorregistrieren",
+        "Von Pädagogen entwickelt für die nächste Generation.",
+      ctaPrimary: "Kostenlos Vorregistrieren",
       ctaSecondary: "Deine Vorteile",
       storeLabel: "Erhältlich ab Release in",
     },
@@ -33,48 +33,66 @@ export const dictionaries = {
       live: "Wir sind live! Willkommen bei Trustolino.",
     },
     howItWorks: {
-      title: "So funktioniert es",
-      subtitle: "Konzentrier dich auf das, was dir liegt. Wir kümmern uns um den Rest.",
+      title: "Sammle echte Erfahrung und nicht nur Theorie",
+      subtitle: "Mit Trustolino bringst du dein Wissen direkt in die Praxis:",
       items: [
         {
-          title: "Dein Profil, deine Regeln",
-          desc: "Erstelle dein Profil, hinterlege deine Qualifikationen und lege deinen eigenen Preis pro 30 Minuten selbst fest.",
+          title: "Arbeite mit Kindern",
+          desc: "Arbeite mit Kindern in echten Betreuungssituationen und sammle wertvolle praktische Erfahrungen.",
         },
         {
-          title: "Einfacher Kalender",
-          desc: "Trage deine freien Zeiten flexibel im 30-Minuten-Takt ein. Eltern in der Nähe finden dich automatisch.",
+          title: "Entwickle dich weiter",
+          desc: "Entwickle deine pädagogischen Fähigkeiten aktiv weiter und wende dein theoretisches Wissen im Alltag an.",
         },
         {
-          title: "Sichere Buchung & Schutz",
-          desc: "Das Geld der Eltern wird bei Buchung sicher reserviert. Chatte und telefoniere über die App, ohne deine Handynummer preiszugeben.",
+          title: "Baue deinen Lebenslauf auf",
+          desc: "Baue dir früh wertvolle, nachweisliche Berufserfahrung auf, die dich von anderen abhebt.",
         },
         {
-          title: "Wir erledigen den Papierkram",
-          desc: "Nach dem Termin wird das Geld automatisch übermittelt. Rechnungen werden vom System geschrieben und am Jahresende gibt es eine fertige EÜR.",
+          title: "Karrierevorteil",
+          desc: "Ein echter Vorteil für deinen Lebenslauf und der perfekte Startschuss für deine pädagogische Karriere.",
         },
       ]
     },
     trustedEducator: {
-      title: "Was ist ein Trusted Educator?",
-      subtitle: "Als Betreuer der ersten Stunde bist du sehr wichtig für uns. Deshalb bekommst du besondere Vorteile.",
+      title: "Dein Qualitätssiegel für die Zukunft",
+      subtitle: "Bei Trustolino bekommst du mehr als nur einen Nebenjob: Die Trusted Educator Zertifizierung. Ein lebenslanges Qualitätssiegel, das deine Kompetenz, dein Engagement und deine Vertrauenswürdigkeit sichtbar macht.",
       items: [
         {
-          title: "Dein Trusted-Badge",
-          desc: "Löse deinen Code bei der Registrierung in der App ein. So wissen Eltern sofort, dass du von Beginn an dabei bist.",
+          title: "Werde Trusted Educator",
+          desc: "Ein lebenslanges Qualitätssiegel, das Eltern sofort zeigt, dass du von Pädagogen verifiziert wurdest.",
         },
         {
-          title: "Du entscheidest mit",
-          desc: "Wir hören auf dich: Alle sechs Monate fragen wir nach deiner Meinung. Du entscheidest über die Zukunft von Trustolino.",
+          title: "Jährliche Feedback Events",
+          desc: "Werde Teil von Trustolino und nehme an Events teil, wo deine Meinung zählt, um die Welt für Kinder zu verbessern.",
         },
         {
-          title: "Nur für kurze Zeit",
-          desc: "Diesen Status gibt es nur, wenn du dich jetzt vor dem Start anmeldest.",
+          title: "Dein Karrierestart",
+          desc: "Ideal für deinen Einstieg in die pädagogische Berufswelt. Zeige, dass dir Qualität und Förderung wichtig sind.",
+        }
+      ]
+    },
+    appFeatures: {
+      title: "Alles was du für deine Arbeit brauchst",
+      subtitle: "Trustolino löst die typischen Probleme im Betreuungsalltag, damit du dich voll auf die Kinder konzentrieren kannst.",
+      items: [
+        {
+          title: "Steuern und Bürokratie",
+          desc: "Mit unserem automatischen Rechnungstool und dem EÜR Generator sparst du dir den lästigen Papierkram komplett.",
+        },
+        {
+          title: "Sicherheit und Zuverlässigkeit",
+          desc: "Dank Split Payment über einen sicheren Zahlungsanbieter wird dein Geld im Voraus reserviert. Stornierungen sind bis 12 Stunden vorher problemlos möglich.",
+        },
+        {
+          title: "Terminverwaltung",
+          desc: "Der integrierte Kalender hilft dir mit einfachen 30 Minuten Taktungen immer den Überblick über deine Buchungen zu behalten.",
         }
       ]
     },
     businessModel: {
-      title: "Fair und transparent",
-      subtitle: "Gute Arbeit verdient ein faires System. Du zahlst nur, wenn du auch Geld verdienst.",
+      title: "Kein Papierkram und voller Fokus auf deine Arbeit",
+      subtitle: "Wir wissen, dass deine Zeit wertvoll ist. Deshalb übernehmen wir alles Administrative für dich. Du konzentrierst dich auf das, was zählt: die Arbeit mit Kindern.",
       feeTitle: "Kleine Transaktionsgebühr",
       feeDesc: "Wir behalten nur 3% Gebühr ein, wenn eine Betreuung erfolgreich über uns abgewickelt wurde. Hast du keine Buchungen, zahlst du auch keinen Cent.",
       freeTitle: "Alles andere ist kostenlos",
@@ -83,8 +101,8 @@ export const dictionaries = {
       privacyDesc: "Trustolino ist komplett werbefrei. Die Datensicherheit unserer Nutzer liegt uns sehr am Herzen."
     },
     form: {
-      title: "Sichere dir deinen Trusted Educator Status",
-      subtitle: "Trag dich ein und erhalte zum Launch deinen exklusiven Coupon-Code.",
+      title: "Starte deine Zukunft als Pädagoge mit Trustolino",
+      subtitle: "Du studierst Pädagogik, befindest dich in der Ausbildung oder möchtest praktische Erfahrung sammeln? Wir sind ein Start-up aus Deutschland, gegründet von Pädagogen mit einer Mission: Fachkräfte fördern und Qualität sichern. Registriere dich jetzt vor Ablauf des Release-Countdowns, um dir dauerhaft deinen Trusted Educator Status zu sichern.",
       gender: "Geschlecht",
       genderPlaceholder: "Bitte auswählen",
       genderMale: "Männlich",
@@ -94,8 +112,11 @@ export const dictionaries = {
       agePlaceholder: "Dein Alter",
       email: "E-Mail",
       emailPlaceholder: "du@beispiel.de",
-      submit: "Jetzt vorregistrieren",
+      submit: "Kostenlos Vorregistrieren",
       submitting: "Wird gesendet …",
+      next: "Weiter",
+      back: "Zurück",
+      metricsNote: "Diese Daten werden ausschließlich für unsere Metriken zur Plattformnutzung erhoben.",
       successTitle: "Du bist dabei!",
       successDesc:
         "Danke für deine Vorregistrierung! Wir halten dich auf dem Laufenden und schicken dir pünktlich zum Release deinen Coupon-Code.",
@@ -110,7 +131,7 @@ export const dictionaries = {
       privacyConsentLink: "Datenschutzerklärung",
       privacyConsentAfter: "gelesen und stimme zu.",
       emailNote: "Deine E-Mail nutzen wir nur für Updates zum Release und den Versand deines Coupon-Codes.",
-      couponNote: "So funktioniert's: Zum Startschuss schicken wir dir einen einmaligen Code per E-Mail. Wenn du diesen bei deiner Profilerstellung in der App einlöst, bekommst du dauerhaft deinen Trusted Educator Status.",
+      couponNote: "So funktioniert die Vorregistrierung: Zum Release schicken wir dir einen einmaligen Code per E-Mail. Löst du diesen später bei deiner Profilerstellung in der App ein, sicherst du dir dauerhaft deinen Trusted Educator Status.",
     },
     legal: {
       privacyTitle: "Datenschutzerklärung",
@@ -138,19 +159,19 @@ export const dictionaries = {
         "The stress-free app for childcare. Register now as a caregiver, secure early benefits, and join the Trustolino community!",
     },
     nav: {
-      features: "Features",
+      features: "Experience",
       trustedEducator: "Trusted Educator",
       businessModel: "Pricing",
       cta: "Become a Trusted Educator",
     },
     hero: {
       badge: "Pre-Release · Rhein-Neckar Region",
-      titleA: "Become a part of",
-      titleHighlight: "Trustolino",
-      intro: "From searching to secure payments, Trustolino connects parents with verified caregivers.",
+      titleA: "Start your pedagogical future",
+      titleHighlight: "today",
+      intro: "Gain real practical experience, build your resume, and become a certified Trusted Educator. Free. Flexible. Meaningful.",
       subtitle:
-        "Be there from the start. Sign up for our Trusted Educator program and shape the future of Trustolino.",
-      ctaPrimary: "Pre-register now",
+        "Developed by educators for the next generation.",
+      ctaPrimary: "Pre-register for free",
       ctaSecondary: "Your Benefits",
       storeLabel: "Available at release on",
     },
@@ -163,48 +184,66 @@ export const dictionaries = {
       live: "We're live! Welcome to Trustolino.",
     },
     howItWorks: {
-      title: "How it works",
-      subtitle: "Focus on what you do best, we'll take care of the rest.",
+      title: "Gain real experience and not just theory",
+      subtitle: "With Trustolino, you put your knowledge directly into practice:",
       items: [
         {
-          title: "Your Profile, Your Rules",
-          desc: "Create your profile, add your qualifications, and set your own price per 30 minutes.",
+          title: "Work with children",
+          desc: "Work with children in real care situations and gain valuable practical experience.",
         },
         {
-          title: "Simple Calendar",
-          desc: "Enter your availability flexibly in 30-minute blocks. Nearby parents will automatically find you.",
+          title: "Develop your skills",
+          desc: "Actively develop your pedagogical skills and apply your theoretical knowledge in everyday life.",
         },
         {
-          title: "Secure Booking & Protection",
-          desc: "Parents' payments are securely reserved upon booking. Chat and call safely via the app without sharing your phone number.",
+          title: "Build your resume",
+          desc: "Build valuable, demonstrable professional experience early on that sets you apart.",
         },
         {
-          title: "We Handle the Paperwork",
-          desc: "After the appointment, payouts are automatic. Invoices are generated by the system, and at year-end, you get a ready-to-use tax summary.",
+          title: "Career advantage",
+          desc: "A real advantage for your resume and the perfect starting point for your pedagogical career.",
         },
       ]
     },
     trustedEducator: {
-      title: "What is a Trusted Educator?",
-      subtitle: "As an early adopter, you are incredibly important to us. That's why we guarantee you exclusive benefits.",
+      title: "Your quality seal for the future",
+      subtitle: "At Trustolino, you get more than just a side job: The Trusted Educator Certification. A lifelong quality seal that makes your competence, commitment, and trustworthiness visible.",
       items: [
         {
-          title: "The Trusted Badge",
-          desc: "You will receive a special, permanently visible badge on your profile, showing parents instantly that you've been here from the start.",
+          title: "Become a Trusted Educator",
+          desc: "A lifelong quality seal that instantly shows parents you've been verified by educators.",
         },
         {
-          title: "Active Participation",
-          desc: "We listen to you: Every six months we ask for your feedback. You decide on the future of Trustolino.",
+          title: "Annual Feedback Events",
+          desc: "Become part of Trustolino and participate in events where your opinion counts to improve the world for children.",
         },
         {
-          title: "Limited Availability",
-          desc: "This status is exclusively for those who pre-register now during our pre-release phase.",
+          title: "Your Career Start",
+          desc: "Ideal for your entry into the pedagogical professional world. Show that quality and development are important to you.",
+        }
+      ]
+    },
+    appFeatures: {
+      title: "Everything you need for your work",
+      subtitle: "Trustolino solves typical everyday care problems so you can focus entirely on the children.",
+      items: [
+        {
+          title: "Taxes and bureaucracy",
+          desc: "With our automatic invoicing tool and tax report generator, you can completely skip the annoying paperwork.",
+        },
+        {
+          title: "Security and reliability",
+          desc: "Thanks to split payment via a secure payment provider, your money is reserved in advance. Cancellations are easily possible up to 12 hours beforehand.",
+        },
+        {
+          title: "Appointment management",
+          desc: "The integrated calendar helps you keep track of your bookings with simple 30 minute intervals.",
         }
       ]
     },
     businessModel: {
-      title: "Fair and transparent",
-      subtitle: "Good work deserves good conditions. You only pay when you actually earn money.",
+      title: "No paperwork and full focus on your work",
+      subtitle: "We know your time is valuable. That's why we handle all the administrative tasks for you. You concentrate on what matters: working with children.",
       feeTitle: "Small transaction fee",
       feeDesc: "We only charge a small 3% transaction fee on successfully completed bookings. If you don't have any bookings, you pay absolutely nothing.",
       freeTitle: "No subscription traps",
@@ -213,8 +252,8 @@ export const dictionaries = {
       privacyDesc: "Trustolino is completely ad-free. The data security of our users is very important to us."
     },
     form: {
-      title: "Secure your Trusted Educator status",
-      subtitle: "Sign up and receive your exclusive coupon code at launch.",
+      title: "Start your future as an educator with Trustolino",
+      subtitle: "Are you studying pedagogy, in training, or looking to gain practical experience? We are a start-up from Germany, founded by educators with a mission: to support professionals and ensure quality. Pre-register now before the release countdown expires to permanently secure your Trusted Educator status.",
       gender: "Gender",
       genderPlaceholder: "Please select",
       genderMale: "Male",
@@ -224,11 +263,14 @@ export const dictionaries = {
       agePlaceholder: "Your age",
       email: "Email",
       emailPlaceholder: "you@example.com",
-      submit: "Pre-register now",
+      submit: "Pre-register for free",
       submitting: "Sending …",
+      next: "Next",
+      back: "Back",
+      metricsNote: "This data is collected exclusively for our platform usage metrics.",
       successTitle: "You're in!",
       successDesc:
-        "Thank you for pre-registering! We'll keep you updated and send your coupon code right in time for the launch.",
+        "Thank you for pre-registering! We'll keep you updated and send your coupon code right in time for the release.",
       errorRequired: "Please fill in all fields.",
       errorPrivacy: "Please accept the privacy policy.",
       errorEmail: "Please enter a valid email address.",
@@ -239,8 +281,8 @@ export const dictionaries = {
       privacyConsentBefore: "I have read the",
       privacyConsentLink: "Privacy Policy",
       privacyConsentAfter: "and agree to it.",
-      emailNote: "We only use your email for launch updates and to send your coupon code.",
-      couponNote: "How it works: At launch, we'll send you a unique code via email. Redeem it during your in-app profile creation to permanently unlock your Trusted Educator status.",
+      emailNote: "We only use your email for release updates and to send your coupon code.",
+      couponNote: "How pre-registration works: At release, we'll send you a unique code via email. Redeem it during your in-app profile creation to permanently unlock your Trusted Educator status.",
     },
     legal: {
       privacyTitle: "Privacy Policy",

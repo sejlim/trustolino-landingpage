@@ -10,11 +10,13 @@ export function CustomSelect({
   value,
   onChange,
   placeholder,
+  className,
 }: {
   options: Option[]
   value: string
   onChange: (value: string) => void
   placeholder: string
+  className?: string
 }) {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
@@ -38,7 +40,8 @@ export function CustomSelect({
         onClick={() => setOpen(!open)}
         className={cn(
           "h-11 w-full cursor-pointer rounded-xl border border-input bg-card px-3 pr-10 text-left text-base transition-[border-color,transform] duration-200 outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:scale-[0.98] md:text-sm",
-          value ? "text-foreground" : "text-muted-foreground"
+          value ? "text-foreground" : "text-muted-foreground",
+          className
         )}
       >
         {selected ? selected.label : placeholder}
