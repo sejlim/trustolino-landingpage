@@ -10,7 +10,7 @@ export const dictionaries = {
     nav: {
       features: "Praxiserfahrung",
       trustedEducator: "Trusted Educator",
-      businessModel: "Preis",
+      businessModel: "Features & Preis",
       cta: "Trusted Educator werden",
     },
     hero: {
@@ -161,7 +161,7 @@ export const dictionaries = {
     nav: {
       features: "Experience",
       trustedEducator: "Trusted Educator",
-      businessModel: "Pricing",
+      businessModel: "Features & Pricing",
       cta: "Become a Trusted Educator",
     },
     hero: {

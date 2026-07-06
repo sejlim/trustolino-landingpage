@@ -1,8 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useForm } from "@tanstack/react-form"
-import { CheckCircleIcon, ArrowPathIcon } from "@heroicons/react/16/solid"
+import { CheckCircleIcon, ArrowPathIcon, XMarkIcon } from "@heroicons/react/16/solid"
 import { dictionaries, type Lang } from "@/lib/i18n"
 import { Countdown } from "@/components/landing/countdown"
 import { CustomSelect } from "@/components/ui/custom-select"
@@ -21,6 +21,13 @@ export function SignupForm({ lang }: { lang: Lang }) {
   const [status, setStatus] = useState<Status>("idle")
   const [error, setError] = useState<string | null>(null)
   const [step, setStep] = useState(1)
+
+  useEffect(() => {
+    if (error) {
+      const timer = setTimeout(() => setError(null), 5000)
+      return () => clearTimeout(timer)
+    }
+  }, [error])
   
   const form = useForm({
     defaultValues: {
@@ -95,16 +102,36 @@ export function SignupForm({ lang }: { lang: Lang }) {
 
         {/* LEFT SIDE: FORM (Middle on mobile, Left spanning both rows on desktop) */}
         <div className="relative flex flex-col overflow-hidden rounded-[2rem] border border-border bg-card lg:col-start-1 lg:row-span-2 lg:row-start-1">
-          {status !== "success" && (
-            <div className="absolute left-0 right-0 top-0 h-1.5 bg-primary/10">
+          <div className="absolute left-0 right-0 top-0 h-1.5 bg-primary/10 z-10">
+            <motion.div
+              className="h-full bg-primary"
+              initial={false}
+              animate={{ width: `${status === "success" ? 100 : step === 1 ? 0 : step === 2 ? 33 : 66}%` }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            />
+          </div>
+
+          <AnimatePresence>
+            {error && (
               <motion.div
-                className="h-full bg-primary"
-                initial={false}
-                animate={{ width: `${(step / 3) * 100}%` }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-              />
-            </div>
-          )}
+                key="error-toast"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20, transition: { duration: 0.2 } }}
+                className="absolute top-6 left-6 right-6 z-50 flex items-center justify-between rounded-2xl bg-destructive px-5 py-3.5 text-sm font-bold text-destructive-foreground shadow-xl"
+              >
+                <span>{error}</span>
+                <button 
+                  type="button" 
+                  onClick={() => setError(null)}
+                  className="shrink-0 cursor-pointer rounded-full p-1 opacity-80 transition-opacity hover:opacity-100"
+                  aria-label="Schließen"
+                >
+                  <XMarkIcon className="size-5" />
+                </button>
+              </motion.div>
+            )}
+          </AnimatePresence>
           <div className="flex flex-1 flex-col p-6 sm:p-10 pt-8 sm:pt-12">
             {status === "success" ? (
               <div className="flex h-full flex-col items-center justify-center gap-4 py-8 text-center">
@@ -231,12 +258,6 @@ export function SignupForm({ lang }: { lang: Lang }) {
                         {t.form.metricsNote}
                       </p>
 
-                      {error && (
-                        <p className="rounded-xl bg-destructive/10 px-4 py-2.5 text-sm font-bold text-destructive" role="alert">
-                          {error}
-                        </p>
-                      )}
-
                       <div className="mt-auto flex gap-4 flex-col sm:flex-row pt-4">
                         <Button
                           type="button"
@@ -338,12 +359,6 @@ export function SignupForm({ lang }: { lang: Lang }) {
                           </Label>
                         )}
                       />
-
-                      {error && (
-                        <p className="rounded-xl bg-destructive/10 px-4 py-2.5 text-sm font-bold text-destructive" role="alert">
-                          {error}
-                        </p>
-                      )}
 
                       <div className="mt-auto flex gap-4 flex-col sm:flex-row pt-4">
                         <Button

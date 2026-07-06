@@ -24,7 +24,7 @@ export function TrustedEducator({ lang }: { lang: Lang }) {
             return (
               <div
                 key={i}
-                className="flex flex-col gap-4 rounded-3xl border border-primary-foreground/20 bg-primary-foreground/10 p-6 lg:flex-row lg:items-start"
+                className="flex items-start gap-4 rounded-3xl border border-primary-foreground/20 bg-primary-foreground/10 p-6"
               >
                 <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-primary-foreground text-primary">
                   <Icon className="size-5" aria-hidden />
