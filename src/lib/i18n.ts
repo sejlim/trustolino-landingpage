@@ -15,14 +15,22 @@ export const dictionaries = {
     },
     hero: {
       badge: "Pre-Release · Rhein-Neckar-Region",
-      titleA: "Starte deine pädagogische Zukunft schon",
-      titleHighlight: "heute",
-      intro: "Sammle echte Praxiserfahrung, baue deinen Lebenslauf auf und werde zertifizierter Trusted Educator. Kostenlos. Flexibel. Sinnvoll.",
-      subtitle:
-        "Von Pädagogen entwickelt für die nächste Generation.",
+      titleA: "Verdiene Geld mit dem, was du wirklich kannst:",
+      titleHighlight: "Pädagogik.",
+      intro: "Trustolino ist die Betreuungsplattform, auf der ausschließlich geprüfte Betreuungsprofis betreuen: Pädagogik-Studierende, Auszubildende und ausgebildete Fachkräfte. Sammle bezahlte Praxiserfahrung in deinem Fachgebiet, baue dein Karriereportfolio auf und werde verifizierter Trusted Educator.",
+      subtitle: "Von Pädagogen entwickelt für die nächste Generation.",
       ctaPrimary: "Kostenlos Vorregistrieren",
       ctaSecondary: "Deine Vorteile",
       storeLabel: "Erhältlich ab Release in",
+      trustBadges: [
+        "Nur mit pädagogischem Nachweis",
+        "Von Pädagogen gegründet",
+        "0 € Grundgebühr"
+      ]
+    },
+    usp: {
+      title: "Hier kann sich nicht jeder anmelden. Genau das ist der Punkt.",
+      desc: "Auf klassischen Betreuungsplattformen legt jeder in zwei Minuten ein Profil an, Qualifikation optional. Bei Trustolino nicht. Wir nehmen ausschließlich Menschen auf, die Pädagogik studieren, eine pädagogische Ausbildung machen oder bereits ausgebildete Fachkraft sind. Jeder Nachweis wird geprüft, bevor ein Profil live geht. Das gibt Eltern Sicherheit und dir ein Umfeld, das deine Qualifikation ernst nimmt und fair bezahlt."
     },
     countdown: {
       heading: "Bis zum Release",
@@ -33,7 +41,9 @@ export const dictionaries = {
       live: "Wir sind live! Willkommen bei Trustolino.",
     },
     howItWorks: {
-      title: "Sammle echte Erfahrung und nicht nur Theorie",
+      infoTitle: "Warum nennen wir dich Betreuungsprofi?",
+      infoText: "Bei Trustolino bist du Betreuungsprofi. Warum nennen wir dich nicht einfach Fachkraft? Weil Fachkraft in der Kinder- und Jugendhilfe ein fachlich definierter Begriff ist, der einen abgeschlossenen Berufs- oder Studienabschluss voraussetzt. Viele von euch sind noch auf dem Weg dorthin, und genau diesen Weg unterstützen wir. Betreuungsprofi umfasst euch alle: geprüft, mit pädagogischem Hintergrund und einem professionellen Anspruch an die eigene Arbeit. Den Titel gibt es bei uns nicht durch Behauptung, sondern durch Prüfung.",
+      title: "Sammle echte Erfahrung und mach sie nachweisbar",
       subtitle: "Mit Trustolino bringst du dein Wissen direkt in die Praxis:",
       items: [
         {
@@ -45,13 +55,10 @@ export const dictionaries = {
           desc: "Entwickle deine pädagogischen Fähigkeiten aktiv weiter und wende dein theoretisches Wissen im Alltag an.",
         },
         {
-          title: "Baue deinen Lebenslauf auf",
-          desc: "Baue dir früh wertvolle, nachweisliche Berufserfahrung auf, die dich von anderen abhebt.",
-        },
-        {
-          title: "Karrierevorteil",
-          desc: "Ein echter Vorteil für deinen Lebenslauf und der perfekte Startschuss für deine pädagogische Karriere.",
-        },
+          title: "Karriereportfolio",
+          desc: "Dein Karriereportfolio wächst automatisch mit: Jede Betreuung dokumentiert Stunden, Altersgruppen, Elternarbeit und Bewertungen. Am Ende exportierst du alles als PDF, ein Praxisnachweis, der deine erste Bewerbung von allen anderen abhebt, die nur ihre Pflichtpraktika vorweisen können.",
+          smallPrint: "Dein Portfolio ergänzt Ausbildung und Studium, es ersetzt kein Pflichtpraktikum und ist nicht als Ausbildungs- oder Studienleistung anrechenbar."
+        }
       ]
     },
     trustedEducator: {
@@ -63,8 +70,8 @@ export const dictionaries = {
           desc: "Ein lebenslanges Qualitätssiegel, das Eltern sofort zeigt, dass du von Pädagogen verifiziert wurdest.",
         },
         {
-          title: "Jährliche Feedback Events",
-          desc: "Werde Teil von Trustolino und nehme an Events teil, wo deine Meinung zählt, um die Welt für Kinder zu verbessern.",
+          title: "Community Events",
+          desc: "Nimm an unseren Community-Events teil und gestalte mit, wie sich Trustolino weiterentwickelt. Deine Praxiserfahrung fließt direkt ins Produkt.",
         },
         {
           title: "Dein Karrierestart",
@@ -78,7 +85,8 @@ export const dictionaries = {
       items: [
         {
           title: "Steuern und Bürokratie",
-          desc: "Mit unserem automatischen Rechnungstool und dem EÜR Generator sparst du dir den lästigen Papierkram komplett.",
+          desc: "Rechnungen erstellen sich automatisch. Und der EÜR-Generator baut dir die Einnahmen-Überschuss-Rechnung fürs Finanzamt gleich mit. So bleibt dein Papierkram so klein wie möglich.",
+          smallPrint: "Trustolino ersetzt keine Steuerberatung. Wir stellen lediglich alle steuerrelevanten Dokumente bereit."
         },
         {
           title: "Sicherheit und Zuverlässigkeit",
@@ -100,9 +108,45 @@ export const dictionaries = {
       privacyTitle: "Werbefrei & Sicher",
       privacyDesc: "Trustolino ist komplett werbefrei. Die Datensicherheit unserer Nutzer liegt uns sehr am Herzen."
     },
+    verificationProcess: {
+      title: "So wirst du Trusted Educator",
+      items: [
+        {
+          title: "Schritt 1",
+          desc: "Registrieren und Qualifikationsnachweis vorlegen (Immatrikulationsbescheinigung, Ausbildungsvertrag oder Abschlusszeugnis)."
+        },
+        {
+          title: "Schritt 2",
+          desc: "Erweitertes Führungszeugnis vorlegen (optional). Die dafür nötige Bescheinigung stellen wir dir aus, wir prüfen per Einsichtnahme und speichern keine Kopie."
+        },
+        {
+          title: "Schritt 3",
+          desc: "Persönliche Prüfung durch unser Team aus Pädagog:innen, kein Algorithmus, keine Selbstauskunft. Danach geht dein Profil mit dem Trusted-Educator-Siegel live. Damit das Siegel aussagekräftig bleibt, frischen wir die Verifizierung in regelmäßigen Abständen auf."
+        }
+      ]
+    },
+    aboutUs: {
+      title: "Wer hinter Trustolino steht",
+      desc: "Wir sind ein Team aus Pädagog:innen. In Ausbildung, Studium und Leitungsverantwortung haben wir erlebt, wie angehende Fachkräfte kellnern oder Regale einräumen, während Familien händeringend qualifizierte Betreuung suchen. Das passt nicht zusammen. Deshalb Trustolino.",
+      team: [
+        { name: "Anna Schmidt", role: "Staatlich anerkannte Erzieherin", img: "/demo1.png" },
+        { name: "Lukas Weber", role: "Sozialfachwirt", img: "/demo2.png" },
+        { name: "Sophie Müller", role: "Jugend- und Heimerzieherin", img: "/demo3.png" },
+        { name: "Max Wagner", role: "Einrichtungsleitung", img: "/demo4.png" },
+        { name: "Julia Becker", role: "Pädagogik-Studentin", img: "/demo5.png" }
+      ]
+    },
+    promise: {
+      title: "Unser Versprechen an dich",
+      desc: "Trustolino ist kein Jobportal, das an dir verdient und dich dann vergisst. Wir bauen die Plattform, die wir uns in unserer eigenen Ausbildung gewünscht hätten: faire Bezahlung für Arbeit in deinem Fachgebiet, Erfahrung, die dokumentiert wird und zählt, und eine Community, die dich auf deinem Weg zur Fachkraft fördert. Du musst nicht kellnern, um dein Studium zu finanzieren. Du kannst das tun, wofür du dich entschieden hast: mit Kindern arbeiten."
+    },
+    offPlatform: {
+      title: "Warum jede Buchung über Trustolino läuft",
+      desc: "Jede Buchung über Trustolino zahlt auf dich ein: Sie wächst als dokumentierte Erfahrung in deinem Karriereportfolio, dein Honorar ist reserviert, bevor die Betreuung beginnt, Rechnung und EÜR erledigen sich automatisch, und unser Support ist bei Fragen für dich erreichbar. Eine private Absprache an der Plattform vorbei spart 3 % Gebühr und kostet dich alles davon: keinen Nachweis fürs Portfolio, keine Zahlungssicherheit, Papierkram auf eigene Faust."
+    },
     form: {
       title: "Starte deine Zukunft als Pädagoge mit Trustolino",
-      subtitle: "Du studierst Pädagogik, befindest dich in der Ausbildung oder möchtest praktische Erfahrung sammeln? Wir sind ein Start-up aus Deutschland, gegründet von Pädagogen mit einer Mission: Fachkräfte fördern und Qualität sichern. Registriere dich jetzt vor Ablauf des Release-Countdowns, um dir dauerhaft deinen Trusted Educator Status zu sichern.",
+      subtitle: "Sichere dir jetzt deinen Platz: Alle, die sich vor dem Release vorregistrieren, erhalten den Trusted-Educator-Status dauerhaft kostenlos. Wir schicken dir zum Release einen persönlichen Code. Mehr als deine E-Mail-Adresse brauchen wir nicht, und du kannst sie jederzeit wieder löschen lassen.",
       gender: "Geschlecht",
       genderPlaceholder: "Bitte auswählen",
       genderMale: "Männlich",
@@ -166,14 +210,22 @@ export const dictionaries = {
     },
     hero: {
       badge: "Pre-Release · Rhein-Neckar Region",
-      titleA: "Start your pedagogical future",
-      titleHighlight: "today",
-      intro: "Gain real practical experience, build your resume, and become a certified Trusted Educator. Free. Flexible. Meaningful.",
-      subtitle:
-        "Developed by educators for the next generation.",
+      titleA: "Earn money with what you're truly good at:",
+      titleHighlight: "Pedagogy.",
+      intro: "Trustolino is the childcare platform where exclusively verified childcare professionals provide care: pedagogy students, trainees, and trained specialists. Gain paid practical experience in your field, build your career portfolio, and become a verified Trusted Educator.",
+      subtitle: "Developed by educators for the next generation.",
       ctaPrimary: "Pre-register for free",
       ctaSecondary: "Your Benefits",
       storeLabel: "Available at release on",
+      trustBadges: [
+        "Only with pedagogical proof",
+        "Founded by educators",
+        "€0 Base fee"
+      ]
+    },
+    usp: {
+      title: "Not everyone can sign up here. That's exactly the point.",
+      desc: "On classic childcare platforms, anyone can create a profile in two minutes, qualifications optional. Not at Trustolino. We exclusively accept people who are studying pedagogy, doing pedagogical training, or are already trained professionals. Every credential is verified before a profile goes live. This gives parents security and you an environment that takes your qualifications seriously and pays fairly."
     },
     countdown: {
       heading: "Until Release",
@@ -184,7 +236,9 @@ export const dictionaries = {
       live: "We're live! Welcome to Trustolino.",
     },
     howItWorks: {
-      title: "Gain real experience and not just theory",
+      infoTitle: "Why do we call you a childcare professional?",
+      infoText: "At Trustolino, you are a childcare professional. Why don't we just call you a specialist? Because specialist in child and youth welfare is a technically defined term that requires a completed vocational or university degree. Many of you are still on your way there, and we support exactly this path. Childcare professional encompasses all of you: verified, with a pedagogical background and a professional standard for your own work. You don't get the title here by claiming it, but by passing a verification.",
+      title: "Gain real experience and make it verifiable",
       subtitle: "With Trustolino, you put your knowledge directly into practice:",
       items: [
         {
@@ -196,13 +250,10 @@ export const dictionaries = {
           desc: "Actively develop your pedagogical skills and apply your theoretical knowledge in everyday life.",
         },
         {
-          title: "Build your resume",
-          desc: "Build valuable, demonstrable professional experience early on that sets you apart.",
-        },
-        {
-          title: "Career advantage",
-          desc: "A real advantage for your resume and the perfect starting point for your pedagogical career.",
-        },
+          title: "Career Portfolio",
+          desc: "Your career portfolio grows automatically: Every care session documents hours, age groups, parent collaboration, and ratings. In the end, you export everything as a PDF, a proof of practice that makes your first application stand out from all the others who can only show their mandatory internships.",
+          smallPrint: "Your portfolio complements your education and studies, it does not replace a mandatory internship and cannot be credited as an educational or academic achievement."
+        }
       ]
     },
     trustedEducator: {
@@ -214,8 +265,8 @@ export const dictionaries = {
           desc: "A lifelong quality seal that instantly shows parents you've been verified by educators.",
         },
         {
-          title: "Annual Feedback Events",
-          desc: "Become part of Trustolino and participate in events where your opinion counts to improve the world for children.",
+          title: "Community Events",
+          desc: "Take part in our community events and help shape how Trustolino evolves. Your practical experience flows directly into the product.",
         },
         {
           title: "Your Career Start",
@@ -229,7 +280,8 @@ export const dictionaries = {
       items: [
         {
           title: "Taxes and bureaucracy",
-          desc: "With our automatic invoicing tool and tax report generator, you can completely skip the annoying paperwork.",
+          desc: "Invoices are created automatically. And the tax report generator builds your revenue surplus statement for the tax office right away. This keeps your paperwork to a minimum.",
+          smallPrint: "Trustolino does not replace tax advice. We only provide all tax-relevant documents."
         },
         {
           title: "Security and reliability",
@@ -251,9 +303,45 @@ export const dictionaries = {
       privacyTitle: "Ad-free & Secure",
       privacyDesc: "Trustolino is completely ad-free. The data security of our users is very important to us."
     },
+    verificationProcess: {
+      title: "How to become a Trusted Educator",
+      items: [
+        {
+          title: "Step 1",
+          desc: "Register and submit proof of qualifications (certificate of enrollment, training contract, or graduation certificate)."
+        },
+        {
+          title: "Step 2",
+          desc: "Submit an extended certificate of conduct (optional). We will issue the necessary certificate for this, we verify by inspection and do not store a copy."
+        },
+        {
+          title: "Step 3",
+          desc: "Personal verification by our team of educators, no algorithm, no self-disclosure. After that, your profile goes live with the Trusted Educator seal. To ensure the seal remains meaningful, we refresh the verification at regular intervals."
+        }
+      ]
+    },
+    aboutUs: {
+      title: "Who is behind Trustolino",
+      desc: "We are a team of educators. During our training, studies, and management roles, we experienced how aspiring professionals wait tables or stock shelves while families are desperately looking for qualified childcare. That doesn't fit together. That's why Trustolino.",
+      team: [
+        { name: "Anna Schmidt", role: "Certified Educator", img: "/demo1.png" },
+        { name: "Lukas Weber", role: "Social Business Administrator", img: "/demo2.png" },
+        { name: "Sophie Müller", role: "Child and Youth Care Worker", img: "/demo3.png" },
+        { name: "Max Wagner", role: "Facility Manager", img: "/demo4.png" },
+        { name: "Julia Becker", role: "Pedagogy Student", img: "/demo5.png" }
+      ]
+    },
+    promise: {
+      title: "Our promise to you",
+      desc: "Trustolino is not a job portal that makes money off you and then forgets you. We are building the platform we wished we had during our own education: fair pay for work in your field, experience that is documented and counts, and a community that supports you on your way to becoming a professional. You don't have to wait tables to finance your studies. You can do what you chose to do: work with children."
+    },
+    offPlatform: {
+      title: "Why every booking goes through Trustolino",
+      desc: "Every booking via Trustolino pays off for you: It grows as documented experience in your career portfolio, your fee is reserved before the care begins, invoicing and tax reports are handled automatically, and our support is available if you have questions. A private arrangement outside the platform saves 3% in fees and costs you all of this: no proof for your portfolio, no payment security, paperwork on your own."
+    },
     form: {
       title: "Start your future as an educator with Trustolino",
-      subtitle: "Are you studying pedagogy, in training, or looking to gain practical experience? We are a start-up from Germany, founded by educators with a mission: to support professionals and ensure quality. Pre-register now before the release countdown expires to permanently secure your Trusted Educator status.",
+      subtitle: "Secure your spot now: Everyone who pre-registers before the release gets the Trusted Educator status permanently for free. We'll send you a personal code at release. We don't need more than your email address, and you can have it deleted at any time.",
       gender: "Gender",
       genderPlaceholder: "Please select",
       genderMale: "Male",

@@ -26,13 +26,24 @@ export function Hero({ lang }: { lang: Lang }) {
             {t.hero.subtitle}
           </p>
 
-          <div className="flex pt-4">
+          <div className="flex flex-col items-start gap-4 pt-4">
             <a
               href="#signup"
               className="inline-flex h-14 items-center justify-center rounded-2xl bg-accent border border-border px-8 text-lg font-extrabold text-accent-foreground transition-[transform,background-color] hover:bg-accent/90 active:scale-[0.96]"
             >
               {t.hero.ctaPrimary}
             </a>
+
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-medium text-muted-foreground">
+              {t.hero.trustBadges.map((badge, i) => (
+                <span key={i} className="flex items-center gap-2">
+                  {badge}
+                  {i < t.hero.trustBadges.length - 1 && (
+                    <span className="opacity-50">·</span>
+                  )}
+                </span>
+              ))}
+            </div>
           </div>
 
         </div>

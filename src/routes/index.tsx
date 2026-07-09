@@ -1,8 +1,13 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { Hero } from '@/components/landing/hero'
-import { TrustedEducator } from '@/components/landing/trusted-educator'
+import { UspSection } from '@/components/landing/usp'
 import { HowItWorks } from '@/components/landing/how-it-works'
 import { BusinessModel } from '@/components/landing/business-model'
+import { VerificationProcessSection } from '@/components/landing/verification-process'
+import { TrustedEducator } from '@/components/landing/trusted-educator'
+import { AboutUsSection } from '@/components/landing/about-us'
+import { PromiseSection } from '@/components/landing/promise'
+import { OffPlatformSection } from '@/components/landing/off-platform'
 import { SignupForm } from '@/components/landing/signup-form'
 
 export const Route = createFileRoute('/')({
@@ -23,9 +28,14 @@ function Index() {
   return (
     <main>
       <Hero lang="de" />
+      <UspSection lang="de" />
       <HowItWorks lang="de" />
       <BusinessModel lang="de" />
+      <VerificationProcessSection lang="de" />
       <TrustedEducator lang="de" />
+      <AboutUsSection lang="de" />
+      <PromiseSection lang="de" />
+      <OffPlatformSection lang="de" />
       <div className="border-t border-border bg-background">
         <SignupForm lang="de" />
       </div>

@@ -39,6 +39,11 @@ export function BusinessModel({ lang }: { lang: Lang }) {
                 <div className="flex flex-col gap-1.5">
                   <h3 className="text-lg font-extrabold text-foreground">{item.title}</h3>
                   <p className="text-pretty text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
+                  {'smallPrint' in item && item.smallPrint && (
+                    <p className="mt-2 text-xs leading-relaxed text-muted-foreground/70 italic">
+                      {item.smallPrint}
+                    </p>
+                  )}
                 </div>
               </div>
             )

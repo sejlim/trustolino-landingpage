@@ -153,20 +153,8 @@ export function SignupForm({ lang }: { lang: Lang }) {
                 className="relative flex flex-1 flex-col"
                 noValidate
               >
-                {/* INVISIBLE SIZER to lock height to Step 1 */}
-                <div className="invisible pointer-events-none flex flex-col gap-6" aria-hidden>
-                  <div className="mb-2 text-left">
-                    <h2 className="text-balance text-2xl font-extrabold tracking-tight sm:text-3xl">
-                      {t.form.title}
-                    </h2>
-                    <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-                      {t.form.subtitle}
-                    </p>
-                  </div>
-                  <div className="mt-auto pt-4">
-                    <div className="h-14 w-full" />
-                  </div>
-                </div>
+                {/* SIZER to lock minimum height without duplicating text in DOM */}
+                <div className="invisible pointer-events-none min-h-[220px]" aria-hidden />
 
                 <div className="absolute inset-0 flex flex-col">
                   <AnimatePresence mode="wait">
