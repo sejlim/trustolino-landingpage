@@ -6,7 +6,7 @@ export function Hero({ lang }: { lang: Lang }) {
   const t = dictionaries[lang]
 
   return (
-    <section id="top" className="relative min-h-dvh overflow-hidden bg-background">
+    <section id="top" className="relative min-h-dvh overflow-hidden bg-background border-b border-border">
       <div className="mx-auto grid min-h-[inherit] w-full max-w-6xl items-center gap-10 px-4 pb-16 pt-24 sm:px-6 lg:grid-cols-2 lg:gap-8 lg:pb-24 lg:pt-28">
         <div className="flex flex-col items-start gap-6 text-left">
           <h1 className="text-balance text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
@@ -18,12 +18,8 @@ export function Hero({ lang }: { lang: Lang }) {
             </span>
           </h1>
 
-          <p className="max-w-lg text-pretty text-xl font-bold leading-relaxed text-foreground">
-            {t.hero.intro}
-          </p>
-
           <p className="max-w-lg text-pretty text-lg leading-relaxed text-muted-foreground">
-            {t.hero.subtitle}
+            {t.hero.intro}
           </p>
 
           <div className="flex flex-col items-start gap-4 pt-4">

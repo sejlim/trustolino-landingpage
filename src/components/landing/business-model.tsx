@@ -4,7 +4,8 @@ import {
   CalendarDaysIcon,
   ReceiptPercentIcon, 
   CurrencyEuroIcon, 
-  ShieldCheckIcon 
+  ShieldCheckIcon,
+  ShieldExclamationIcon
 } from "@heroicons/react/24/outline"
 import { dictionaries, type Lang } from "@/lib/i18n"
 
@@ -13,7 +14,7 @@ export function BusinessModel({ lang }: { lang: Lang }) {
   const featureIcons = [DocumentTextIcon, CreditCardIcon, CalendarDaysIcon]
 
   return (
-    <section id="business-model" className="scroll-mt-20 py-16 sm:py-24">
+    <section id="business-model" className="scroll-mt-20 bg-background py-16 sm:py-24 border-b border-border">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <div className="mb-16 max-w-2xl text-left">
           <h2 className="text-balance text-3xl font-extrabold tracking-tight sm:text-4xl">
@@ -31,7 +32,7 @@ export function BusinessModel({ lang }: { lang: Lang }) {
             return (
               <div
                 key={i}
-                className="flex h-full items-start gap-5 rounded-3xl border border-border bg-card p-6 sm:p-8"
+                className="flex h-full items-start gap-4 rounded-3xl border border-border bg-card p-6 sm:p-8"
               >
                 <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                   <Icon className="size-5" aria-hidden />
@@ -72,6 +73,20 @@ export function BusinessModel({ lang }: { lang: Lang }) {
               <h3 className="text-lg font-extrabold text-foreground">{t.businessModel.privacyTitle}</h3>
               <p className="text-pretty text-sm leading-relaxed text-muted-foreground">{t.businessModel.privacyDesc}</p>
             </div>
+          </div>
+        </div>
+
+        <div className="mt-6 flex w-full items-start gap-4 rounded-3xl border border-primary/10 bg-primary/5 p-6 sm:p-8">
+          <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
+            <ShieldExclamationIcon className="size-5" aria-hidden="true" />
+          </span>
+          <div className="flex flex-col gap-1.5">
+            <h2 className="text-lg font-extrabold text-foreground">
+              {t.offPlatform.title}
+            </h2>
+            <p className="text-pretty text-sm leading-relaxed text-muted-foreground">
+              {t.offPlatform.desc}
+            </p>
           </div>
         </div>
       </div>

@@ -6,24 +6,9 @@ export function HowItWorks({ lang }: { lang: Lang }) {
   const icons = [UserIcon, CalendarDaysIcon, DocumentTextIcon]
 
   return (
-    <section id="howItWorks" className="scroll-mt-20 bg-primary py-16 sm:py-24">
-      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
+    <section id="howItWorks" className="scroll-mt-20 bg-primary pt-16 sm:pt-24 border-b border-primary-foreground/10">
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 pb-16 sm:pb-24">
         
-        {/* Info Box: Begriffsstrategie */}
-        <div className="mb-16 rounded-3xl border border-primary-foreground/20 bg-primary-foreground/10 p-6 sm:p-8 flex flex-col md:flex-row gap-6 items-start">
-          <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-primary-foreground text-primary">
-            <InformationCircleIcon className="size-8" aria-hidden="true" />
-          </div>
-          <div>
-            <h3 className="text-xl font-extrabold text-primary-foreground mb-2">
-              {t.howItWorks.infoTitle}
-            </h3>
-            <p className="text-pretty text-base leading-relaxed text-primary-foreground/90">
-              {t.howItWorks.infoText}
-            </p>
-          </div>
-        </div>
-
         <div className="mb-16 max-w-2xl text-left">
           <h2 className="text-balance text-3xl font-extrabold tracking-tight sm:text-4xl text-primary-foreground">
             {t.howItWorks.title}
@@ -61,6 +46,25 @@ export function HowItWorks({ lang }: { lang: Lang }) {
               </div>
             )
           })}
+        </div>
+      </div>
+
+      <hr className="border-t border-primary-foreground/10 w-full" />
+
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 py-16 sm:py-24">
+        {/* Info Box: Begriffsstrategie moved to bottom */}
+        <div className="rounded-3xl border border-primary-foreground/20 bg-primary-foreground/10 p-6 sm:p-8 flex items-start gap-4">
+          <div className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-primary-foreground text-primary">
+            <InformationCircleIcon className="size-5" aria-hidden="true" />
+          </div>
+          <div className="flex flex-col gap-1.5">
+            <h3 className="text-lg font-extrabold text-primary-foreground">
+              {t.howItWorks.infoTitle}
+            </h3>
+            <p className="text-pretty text-sm leading-relaxed text-primary-foreground/80">
+              {t.howItWorks.infoText}
+            </p>
+          </div>
         </div>
       </div>
     </section>

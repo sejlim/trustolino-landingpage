@@ -4,7 +4,7 @@ export function AboutUsSection({ lang }: { lang: Lang }) {
   const t = dictionaries[lang]
 
   return (
-    <section className="bg-background py-16 sm:py-24 border-b border-border">
+    <section id="team" className="scroll-mt-20 bg-background py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-2xl text-left mb-16">
           <h2 className="text-balance text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">

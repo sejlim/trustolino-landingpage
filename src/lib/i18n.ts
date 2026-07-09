@@ -11,6 +11,7 @@ export const dictionaries = {
       features: "Praxiserfahrung",
       trustedEducator: "Trusted Educator",
       businessModel: "Features & Preis",
+      team: "Das Team",
       cta: "Trusted Educator werden",
     },
     hero: {
@@ -18,7 +19,6 @@ export const dictionaries = {
       titleA: "Verdiene Geld mit dem, was du wirklich kannst:",
       titleHighlight: "Pädagogik.",
       intro: "Trustolino ist die Betreuungsplattform, auf der ausschließlich geprüfte Betreuungsprofis betreuen: Pädagogik-Studierende, Auszubildende und ausgebildete Fachkräfte. Sammle bezahlte Praxiserfahrung in deinem Fachgebiet, baue dein Karriereportfolio auf und werde verifizierter Trusted Educator.",
-      subtitle: "Von Pädagogen entwickelt für die nächste Generation.",
       ctaPrimary: "Kostenlos Vorregistrieren",
       ctaSecondary: "Deine Vorteile",
       storeLabel: "Erhältlich ab Release in",
@@ -85,7 +85,7 @@ export const dictionaries = {
       items: [
         {
           title: "Steuern und Bürokratie",
-          desc: "Rechnungen erstellen sich automatisch. Und der EÜR-Generator baut dir die Einnahmen-Überschuss-Rechnung fürs Finanzamt gleich mit. So bleibt dein Papierkram so klein wie möglich.",
+          desc: "Rechnungen erstellen sich automatisch. Wir stellen dir alle wichtigen Dokumente zusammen, damit dein Papierkram so klein wie möglich bleibt.",
           smallPrint: "Trustolino ersetzt keine Steuerberatung. Wir stellen lediglich alle steuerrelevanten Dokumente bereit."
         },
         {
@@ -102,7 +102,7 @@ export const dictionaries = {
       title: "Kein Papierkram und voller Fokus auf deine Arbeit",
       subtitle: "Wir wissen, dass deine Zeit wertvoll ist. Deshalb übernehmen wir alles Administrative für dich. Du konzentrierst dich auf das, was zählt: die Arbeit mit Kindern.",
       feeTitle: "Kleine Transaktionsgebühr",
-      feeDesc: "Wir behalten nur 3% Gebühr ein, wenn eine Betreuung erfolgreich über uns abgewickelt wurde. Hast du keine Buchungen, zahlst du auch keinen Cent.",
+      feeDesc: "Wir behalten nur eine kleine Gebühr ein, wenn eine Betreuung erfolgreich über uns abgewickelt wurde. Hast du keine Buchungen, zahlst du auch keinen Cent.",
       freeTitle: "Alles andere ist kostenlos",
       freeDesc: "Keine Abos, keine versteckten Kosten. Alle Features sind für dich komplett kostenlos direkt verfügbar.",
       privacyTitle: "Werbefrei & Sicher",
@@ -129,11 +129,11 @@ export const dictionaries = {
       title: "Wer hinter Trustolino steht",
       desc: "Wir sind ein Team aus Pädagog:innen. In Ausbildung, Studium und Leitungsverantwortung haben wir erlebt, wie angehende Fachkräfte kellnern oder Regale einräumen, während Familien händeringend qualifizierte Betreuung suchen. Das passt nicht zusammen. Deshalb Trustolino.",
       team: [
-        { name: "Anna Schmidt", role: "Staatlich anerkannte Erzieherin", img: "/demo1.png" },
-        { name: "Lukas Weber", role: "Sozialfachwirt", img: "/demo2.png" },
-        { name: "Sophie Müller", role: "Jugend- und Heimerzieherin", img: "/demo3.png" },
-        { name: "Max Wagner", role: "Einrichtungsleitung", img: "/demo4.png" },
-        { name: "Julia Becker", role: "Pädagogik-Studentin", img: "/demo5.png" }
+        { name: "Felix", role: "Gründer", img: "/demo1.png" },
+        { name: "Jonas", role: "Gründer", img: "/demo2.png" },
+        { name: "Phil", role: "Gründer", img: "/demo3.png" },
+        { name: "Jan", role: "Gründer", img: "/demo4.png" },
+        { name: "Selim", role: "CTO", img: "/demo5.png" }
       ]
     },
     promise: {
@@ -142,7 +142,7 @@ export const dictionaries = {
     },
     offPlatform: {
       title: "Warum jede Buchung über Trustolino läuft",
-      desc: "Jede Buchung über Trustolino zahlt auf dich ein: Sie wächst als dokumentierte Erfahrung in deinem Karriereportfolio, dein Honorar ist reserviert, bevor die Betreuung beginnt, Rechnung und EÜR erledigen sich automatisch, und unser Support ist bei Fragen für dich erreichbar. Eine private Absprache an der Plattform vorbei spart 3 % Gebühr und kostet dich alles davon: keinen Nachweis fürs Portfolio, keine Zahlungssicherheit, Papierkram auf eigene Faust."
+      desc: "Jede Buchung über Trustolino zahlt auf dich ein: Sie wächst als dokumentierte Erfahrung in deinem Karriereportfolio, dein Honorar ist reserviert, bevor die Betreuung beginnt, Rechnungen erledigen sich automatisch, und unser Support ist bei Fragen für dich erreichbar. Eine private Absprache an der Plattform vorbei spart eine kleine Gebühr und kostet dich alles davon: keinen Nachweis fürs Portfolio, keine Zahlungssicherheit, Papierkram auf eigene Faust."
     },
     form: {
       title: "Starte deine Zukunft als Pädagoge mit Trustolino",
@@ -206,6 +206,7 @@ export const dictionaries = {
       features: "Experience",
       trustedEducator: "Trusted Educator",
       businessModel: "Features & Pricing",
+      team: "The Team",
       cta: "Become a Trusted Educator",
     },
     hero: {
@@ -213,7 +214,6 @@ export const dictionaries = {
       titleA: "Earn money with what you're truly good at:",
       titleHighlight: "Pedagogy.",
       intro: "Trustolino is the childcare platform where exclusively verified childcare professionals provide care: pedagogy students, trainees, and trained specialists. Gain paid practical experience in your field, build your career portfolio, and become a verified Trusted Educator.",
-      subtitle: "Developed by educators for the next generation.",
       ctaPrimary: "Pre-register for free",
       ctaSecondary: "Your Benefits",
       storeLabel: "Available at release on",
@@ -280,7 +280,7 @@ export const dictionaries = {
       items: [
         {
           title: "Taxes and bureaucracy",
-          desc: "Invoices are created automatically. And the tax report generator builds your revenue surplus statement for the tax office right away. This keeps your paperwork to a minimum.",
+          desc: "Invoices are created automatically. We compile all important documents for you to keep your paperwork to a minimum.",
           smallPrint: "Trustolino does not replace tax advice. We only provide all tax-relevant documents."
         },
         {
@@ -297,7 +297,7 @@ export const dictionaries = {
       title: "No paperwork and full focus on your work",
       subtitle: "We know your time is valuable. That's why we handle all the administrative tasks for you. You concentrate on what matters: working with children.",
       feeTitle: "Small transaction fee",
-      feeDesc: "We only charge a small 3% transaction fee on successfully completed bookings. If you don't have any bookings, you pay absolutely nothing.",
+      feeDesc: "We only charge a small transaction fee on successfully completed bookings. If you don't have any bookings, you pay absolutely nothing.",
       freeTitle: "No subscription traps",
       freeDesc: "No monthly fees, no premium paywalls for caregivers. All features are completely free and available immediately.",
       privacyTitle: "Ad-free & Secure",
@@ -324,11 +324,11 @@ export const dictionaries = {
       title: "Who is behind Trustolino",
       desc: "We are a team of educators. During our training, studies, and management roles, we experienced how aspiring professionals wait tables or stock shelves while families are desperately looking for qualified childcare. That doesn't fit together. That's why Trustolino.",
       team: [
-        { name: "Anna Schmidt", role: "Certified Educator", img: "/demo1.png" },
-        { name: "Lukas Weber", role: "Social Business Administrator", img: "/demo2.png" },
-        { name: "Sophie Müller", role: "Child and Youth Care Worker", img: "/demo3.png" },
-        { name: "Max Wagner", role: "Facility Manager", img: "/demo4.png" },
-        { name: "Julia Becker", role: "Pedagogy Student", img: "/demo5.png" }
+        { name: "Felix", role: "Founder", img: "/demo1.png" },
+        { name: "Jonas", role: "Founder", img: "/demo2.png" },
+        { name: "Phil", role: "Founder", img: "/demo3.png" },
+        { name: "Jan", role: "Founder", img: "/demo4.png" },
+        { name: "Selim", role: "CTO", img: "/demo5.png" }
       ]
     },
     promise: {
@@ -337,7 +337,7 @@ export const dictionaries = {
     },
     offPlatform: {
       title: "Why every booking goes through Trustolino",
-      desc: "Every booking via Trustolino pays off for you: It grows as documented experience in your career portfolio, your fee is reserved before the care begins, invoicing and tax reports are handled automatically, and our support is available if you have questions. A private arrangement outside the platform saves 3% in fees and costs you all of this: no proof for your portfolio, no payment security, paperwork on your own."
+      desc: "Every booking via Trustolino pays off for you: It grows as documented experience in your career portfolio, your fee is reserved before the care begins, invoicing is handled automatically, and our support is available if you have questions. A private arrangement outside the platform saves a small fee and costs you all of this: no proof for your portfolio, no payment security, paperwork on your own."
     },
     form: {
       title: "Start your future as an educator with Trustolino",

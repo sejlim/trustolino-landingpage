@@ -8,6 +8,7 @@ export function SiteHeader({ lang }: { lang: Lang }) {
     { href: "#howItWorks", label: t.nav.features },
     { href: "#business-model", label: t.nav.businessModel },
     { href: "#trusted", label: t.nav.trustedEducator },
+    { href: "#team", label: t.nav.team },
   ]
 
   return (
